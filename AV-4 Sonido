@@ -1,4 +1,4 @@
-# Investigación de Sonido Profesional: Producción y Postproducción (V1.1)
+# Investigación de Sonido Profesional: Producción y Postproducción (V1.2)
 
 ## 1. Fundamentos del Sonido Cinematográfico
 
@@ -30,6 +30,26 @@ La conversión de señal analógica a digital se define por dos parámetros crí
 - **-20 dBFS:** Nivel de referencia estándar SMPTE (USA, cine).
 - **Tono de calibración:** 1 kHz a -18 o -20 dBFS durante 30 segundos al inicio de cada archivo para alineación en postproducción.
 
+### 1.4 Fenómenos Acústicos en Producción
+
+- **Efecto Haas:** Cuando dos sonidos idénticos llegan con una diferencia de 5-35 ms, el cerebro los fusiona en uno solo. Usado para crear sensación de amplitud estéreo.
+- **Efecto de Proximidad:** Aumento de graves al acercar un micrófono direccional a la fuente. Puede ser deseable (voz íntima) o problemático (voz embarrada). Los micrófonos omnidireccionales no sufren este efecto.
+- **Comb Filtering:** Interferencia destructiva que ocurre cuando un mismo sonido llega al micrófono por dos caminos (directo y reflexión) con diferencia de fase. Produce un sonido "metálico" y pérdida de frecuencias discretas.
+- **Room Tone (Silencio de Set):** Se graban 30-60 segundos de silencio en cada locación para rellenar agujeros en postproducción. Sin room tone, los cortes entre tomas suenan artificiales.
+
+### 1.5 Acústica Arquitectónica para Producción
+
+- **RT60:** Tiempo que tarda el sonido en decaer 60 dB desde su nivel original. Para estudios de grabación de diálogos, el RT60 ideal está entre 0.2 y 0.4 segundos.
+- **Materiales absorbentes:** Paneles acústicos de fibra de vidrio, espuma acústica, cortinas pesadas, alfombras.
+- **Trampas de graves (Bass Traps):** Absorbedores específicos para bajas frecuencias (modos de sala), ubicados típicamente en esquinas.
+- **Difusores:** Superficies irregulares diseñadas para dispersar reflexiones sin absorber energía, creando una sensación de espacio más natural que la absorción pura.
+
+### 1.6 Fundamentos de Psicoacústica
+
+- **Curvas de Fletcher-Munson:** La sensibilidad del oído varía con el volumen. A bajo volumen, graves y agudos se perciben atenuados. A 85 dB SPL la percepción es más plana. Crítico para calibrar monitoreo de mezcla.
+- **Localización espacial:** ITD (Interaural Time Difference) para bajas frecuencias, ILD (Interaural Level Difference) para altas frecuencias. HRTF (Head-Related Transfer Function) para percepción vertical y frontal/trasera.
+- **Enmascaramiento frecuencial:** Un sonido fuerte enmascara sonidos más débiles en frecuencias cercanas. Principio detrás de la compresión de audio perceptual (MP3, AAC).
+
 ---
 
 ## 2. Micrófonos: Tipos, Patrones Polares y Aplicaciones
@@ -40,6 +60,8 @@ La conversión de señal analógica a digital se define por dos parámetros crí
 - **Micrófonos de Condensador:** Requieren alimentación phantom power para polarizar su cápsula. Ofrecen mayor sensibilidad y respuesta en frecuencia extendida. Son el estándar para diálogos y efectos.
   - **Phantom Power:** Típicamente +48V, aunque algunos micrófonos requieren +12V o +24V (menos comunes en cine). Transmisores inalámbricos profesionales pueden entregar phantom power para alimentar micrófonos boom directamente desde el bodypack.
 - **Micrófonos de Electret:** Un tipo de condensador con carga pre-polarizada. Suelen ser más compactos y se usan extensamente en lavalieres.
+- **Micrófonos de Cinta (Ribbon):** Utilizan una delgada cinta de aluminio suspendida en un campo magnético. Sonido suave y "vintage". Extremadamente frágiles y sensibles al viento. Ejemplo: Coles 4038 (estándar en estudios de radio y grabación de cuerdas), Royer R-121 (versión moderna más resistente).
+- **Micrófonos PZM (Pressure Zone Microphone):** Se montan sobre una superficie plana (pared, piso, mesa) y capturan el campo de presión sonora en el límite de la superficie, eliminando reflexiones y comb filtering. Ideales para captura de sala, teatro y refuerzo de sonido. Ejemplo: Crown PZM, Shure SM91.
 
 ### 2.2 Patrones Polares
 
@@ -50,6 +72,7 @@ El patrón polar describe la sensibilidad del micrófono al sonido según el án
 - **Supercardioide:** Patrón más direccional que el cardioide, con un lóbulo trasero de sensibilidad menor. Estándar en booming para interiores por su equilibrio entre rechazo lateral y naturalidad. Ejemplos: Sennheiser MKH 50, Schoeps MK41.
 - **Hipercardioide:** Direccionalidad extrema con un lóbulo trasero más pronunciado que el supercardioide. Ideal para exteriores con ruido ambiental. Ejemplo: Sennheiser MKH 8060.
 - **Shotgun (Línea de Transmisión):** Emplea un tubo de interferencia acústica para lograr direccionalidad extrema en altas frecuencias. Es el estándar para booming en exteriores. Pierde su patrón direccional en bajas frecuencias y sufre coloración por reflexiones en interiores. Ejemplo: Sennheiser MKH 416.
+- **Figura-8 (Bidireccional):** Captura frontal y trasera por igual, rechazo total en laterales. Usado en técnicas estéreo Blumlein y MS.
 
 ### 2.3 Micrófonos Boom Estándar en Cine
 
@@ -60,6 +83,8 @@ El patrón polar describe la sensibilidad del micrófono al sonido según el án
 | **Schoeps CMIT 5U** | Shotgun | Exteriores, cine de alto presupuesto | Graves ricos, respuesta plana, construcción artesanal |
 | **Sanken CS-3e** | Shotgun (triple cápsula) | Exteriores con ruido extremo | Rechazo lateral sin igual, patrón consistente en graves |
 | **DPA 4017C** | Shotgun | Exteriores, sitcom, broadcast | Extremadamente ligero, respuesta en frecuencia plana |
+| **Sennheiser MKH 8060** | Shotgun compacto | Exteriores, documental | Más corto que el 416, ideal para booming ligero |
+| **Schoeps CMC 6 + MK41** | Supercardioide modular | Interiores alta gama | Sonido de referencia, cuerpo intercambiable con otras cápsulas |
 
 ### 2.4 Micrófonos Lavalier Profesionales
 
@@ -69,6 +94,12 @@ El patrón polar describe la sensibilidad del micrófono al sonido según el án
 | **Sanken COS-11D** | Condensador omnidireccional | Estándar absoluto en cine y televisión, robusto y versátil |
 | **Countryman B3 / B6** | Condensador omnidireccional | B6 ultraminiatura para ocultación extrema; B3 resistente a humedad |
 | **DPA 4097 CORE** | Micrófono de cañón corto (supercardioide) | Diseñado para booming en espacios reducidos o montaje en cámara |
+
+### 2.5 Micrófonos Especializados
+
+- **Micrófonos de Contacto (Piezoeléctricos):** Capturan vibraciones directamente de superficies sólidas. Útiles para grabar instrumentos acústicos, maquinaria, pasos o efectos de contacto.
+- **Hidrófonos:** Micrófonos diseñados para grabar bajo el agua. Capturan frecuencias muy distintas a las del aire debido a la densidad del agua.
+- **Micrófonos Parabólicos:** Usan un reflector parabólico para capturar sonido a grandes distancias. Comunes en documentales de naturaleza y transmisiones deportivas.
 
 ---
 
@@ -80,6 +111,7 @@ El patrón polar describe la sensibilidad del micrófono al sonido según el án
 - **Sound Devices 888 / Scorpio:** Alta gama. Mezcla multicanal, entradas Dante, control de monitorado avanzado.
 - **Zaxcom Nova:** Competencia directa de Scorpio. Grabación inalámbrica ZaxNet integrada, grabación ISO en transmisor.
 - **Zoom F8n Pro:** Alternativa de presupuesto. Grabación 32-bit float, timecode, 8 entradas XLR.
+- **Aaton Cantar X3:** Grabadora francesa de élite con diseño ergonómico para sonidistas de cine.
 
 ### 3.2 Sistemas Inalámbricos
 
@@ -87,12 +119,20 @@ El patrón polar describe la sensibilidad del micrófono al sonido según el án
 - **Wisycom:** Estándar europeo. Banda ancha de sintonización (240 MHz en un solo transmisor), rechazo de interferencias superior.
 - **Shure Axient Digital:** Broadcast profesional. Escaneo de frecuencias automático, control remoto total.
 - **Sennheiser Digital 6000:** Sucesor del legendario 5000. Sin compresión de audio, latencia ultra baja.
+- **Zaxcom Digital Wireless:** Grabación ISO en transmisor con respaldo interno. ZaxNet para control remoto y timecode inalámbrico.
 
 ### 3.3 Generadores de Timecode
 
 - **Tentacle Sync E:** Compacto, Bluetooth, duración de batería de 30 horas.
 - **Ambient NanoLockit:** Precisión de cuarzo, pantalla informativa, sincronización con ACN.
 - **Deity TC-1:** Económico, pantalla OLED, conexión con app móvil.
+- **Betso TCD-9:** Alternativa europea con pantalla táctil y batería interna de 40 horas.
+
+### 3.4 Antenas y Distribución RF
+
+- **Antenas Shark Fin (Log-Periodic):** Direccionales, usadas para maximizar alcance en sets grandes. Ejemplo: Lectrosonics ALP690, Wisycom LFA.
+- **Distribuidores de Antena (Antenna Splitter):** Permiten conectar múltiples receptores a un solo par de antenas. Ejemplo: Lectrosonics UMC16B.
+- **Filtros RF y Combinadores:** Reducen interferencias entre transmisores en el mismo set. Ejemplo: RF Venue Band-Pass Filters.
 
 ---
 
@@ -111,11 +151,57 @@ El patrón polar describe la sensibilidad del micrófono al sonido según el án
 3. **Grabación ISO:** Cada micrófono se graba en pistas separadas (ISOs) además de la mezcla de monitor (mix track) para el director y script.
 4. **Reporte de Sonido (Sound Report):** Documento físico o digital (apps como MovieSlate) que registra cada toma con metadatos de micrófonos, niveles y observaciones.
 
+### 4.3 Técnicas de Booming
+
+- **Eje Óptimo (Sweet Spot):** El micrófono debe apuntar al pecho del actor (no a la boca directamente) para capturar resonancia corporal y reducir sibilancia.
+- **Distancia Ideal:** 30-60 cm sobre la cabeza del actor, dependiendo del patrón polar y la acústica del set.
+- **Booming en Interiores:** Se prefiere supercardioide (MKH 50) porque el shotgun sufre coloración por reflexiones.
+- **Booming en Exteriores:** Shotgun (MKH 416, CMIT 5U) con zeppelin y peluche (deadcat) para reducción de viento.
+- **Técnica de Cross-Booming:** Dos boom operators cubriendo ángulos opuestos en escenas de diálogo con múltiples actores.
+
+### 4.4 Técnicas de Lavalier
+
+- **Posición Estándar:** A 15-20 cm debajo del mentón, centrado en el pecho.
+- **Ocultación en Vestuario:** Usar cinta adhesiva médica (Transpore, Leukoplast) o soportes Vampire Clip, RM-11, o monturas adhesivas Rycote Stickies.
+- **Protección contra Fricción (Rustle):** Jaulas de espuma o pelo sintético alrededor de la cápsula. Fundas de neopreno para cables.
+- **Doble Lavalier:** En producciones de alto presupuesto se colocan dos lavalieres (uno principal, uno de respaldo) en el actor.
+
+### 4.5 Gestión de Frecuencias en Set
+
+- **Coordinación RF:** El utility o un especialista RF analiza el espectro disponible y asigna frecuencias a cada transmisor para evitar intermodulación.
+- **Software de Coordinación:** Wireless Designer (Lectrosonics), Wireless System Manager (Sennheiser), IAS (Intermodulation Analysis System).
+- **Bandas de Frecuencia Comunes en México:** UHF 470-608 MHz (banda de TV), 614-698 MHz (banda 600 reasignada a telecomunicaciones, evitar en producción).
+
 ---
 
-## 5. Postproducción de Audio
+## 5. Técnicas de Grabación Estéreo y Multicanal
 
-### 5.1 Edición de Diálogo (Dial Edit / DX Edit)
+### 5.1 Técnicas Estéreo
+
+- **XY (Intensidad):** Dos micrófonos cardioides en el mismo punto, con cápsulas a 90°-135°. Excelente mono-compatibilidad. No captura tiempo (fase) sino solo amplitud.
+- **ORTF:** Dos cardioides separados 17 cm, con ángulo de 110°. Equilibrio entre tiempo y amplitud. Imagen estéreo más amplia que XY.
+- **AB (Tiempo):** Dos omnidireccionales separados 40-60 cm. Máxima amplitud estéreo pero pobre mono-compatibilidad.
+- **MS (Mid-Side):** Un cardioide o supercardioide (Mid) y un figura-8 (Side). Decodificación a estéreo: L=M+S, R=M-S. Control total sobre amplitud estéreo en postproducción.
+- **Blumlein:** Dos figura-8 en el mismo punto a 90°. Captura estéreo con información de sala excepcional. El sonido trasero aparece invertido en fase.
+
+### 5.2 Técnicas Surround y Atmosféricas
+
+- **Decca Tree:** Tres micrófonos omnidireccionales (Neumann M50) en formación triangular: dos adelante y uno atrás, elevados sobre la fuente. Estándar para grabación orquestal.
+- **Doble MS:** Dos sistemas MS (uno frontal, uno trasero) para decodificar surround 5.0.
+- **Ambisonics (A-Format / B-Format):** Captura de campo sonoro 3D con micrófonos tetraédricos. Permite decodificar a cualquier formato surround o binaural en postproducción. Ejemplo: Sennheiser AMBEO, Røde NT-SF1.
+- **Binaural:** Grabación con cabeza artificial (dummy head) con micrófonos en los oídos. Produce una experiencia 3D realista para reproducción con audífonos.
+
+### 5.3 Grabación de Efectos (SFX) y Ambientes
+
+- **Field Recording:** Técnica de grabación en exteriores con grabadoras portátiles y micrófonos direccionales o estéreo. Se capturan ambientes, efectos específicos y texturas sonoras.
+- **Grabación de Vehículos:** Múltiples micrófonos (motor, escape, interior, exterior) grabados simultáneamente para reconstrucción en mezcla.
+- **Grabación de Armas y Explosiones:** Micrófonos dinámicos de alta SPL y condensadores a distancia segura. Captura de capa cercana (bang) y capa lejana (cola/eco).
+
+---
+
+## 6. Postproducción de Audio
+
+### 6.1 Edición de Diálogo (Dial Edit / DX Edit)
 
 La edición de diálogo precede a la mezcla y es una fase crítica que incluye:
 - Sincronización con picture lock mediante software como EdiLoad o Matchbox.
@@ -123,14 +209,17 @@ La edición de diálogo precede a la mezcla y es una fase crítica que incluye:
 - Selección de micrófonos entre boom y lavalier por toma (choice picking).
 - Relleno de agujeros con room tone o ambientes.
 
-### 5.2 Plugins Esenciales
+### 6.2 Plugins Esenciales
 
 - **iZotope RX Suite:** Estándar absoluto para limpieza y restauración de audio (De-noise, De-click, De-reverb, Mouth De-click, Dialogue Isolate).
 - **FabFilter Pro-Q 3:** Ecualizador de precisión quirúrgica, indispensable para esculpir diálogos y eliminar resonancias.
 - **Waves WNS / Clarity Vx:** Reducción de ruido en tiempo real para mezcla.
 - **Altiverb / Stratus 3D:** Reverberación por convolución para crear espacios realistas.
+- **FabFilter Pro-C 2:** Compresor con sidechain y múltiples modos.
+- **FabFilter Pro-L 2:** Limitador True Peak con medición de loudness integrada.
+- **Soundtoys EchoBoy / ValhallaDSP:** Delays y reverbs de caracter para diseño sonoro.
 
-### 5.3 Mezcla Multicanal y Stems
+### 6.3 Mezcla Multicanal y Stems
 
 La mezcla final se realiza en estudios calibrados siguiendo estándares de monitoreo (SPL de referencia). Los formatos de entrega incluyen:
 
@@ -140,17 +229,62 @@ La mezcla final se realiza en estudios calibrados siguiendo estándares de monit
   - **Effects (FX):** Ambientes, foley y efectos especiales.
 - **Mezcla Final:** Full Mix en estéreo, 5.1, 7.1.4 o Dolby Atmos según especificaciones del broadcaster o plataforma.
 
-### 5.4 Deliverables Técnicos
+### 6.4 Calibración de Monitoreo
+
+- **Nivel de Referencia SMPTE:** 85 dB SPL (pink noise a -20 dBFS por canal en sala de cine).
+- **Nivel de Referencia EBU:** 79 dB SPL (pink noise a -18 dBFS por canal en sala de TV).
+- **Sistema de Corrección de Sala:** Software como Sonarworks, Trinnov, o hardware como JBL Intonato para compensar la acústica del estudio.
+
+### 6.5 Deliverables Técnicos
 
 | Formato | Especificación Típica |
 | :--- | :--- |
-| **Estéreo** | 48 kHz / 24-bit, Loudness -24 LUFS (EBU R128) o -16 LUFS (plataformas) |
+| **Estéreo** | 48 kHz / 24-bit, Loudness -24 LKFS (EBU R128) o -16 LKFS (plataformas) |
 | **5.1 Surround** | 48 kHz / 24-bit, L R C LFE Ls Rs |
 | **Dolby Atmos** | 96 kHz / 24-bit, archivo ADM BWF con objetos y beds |
 
 ---
 
-## 6. Tabla Comparativa de Micrófonos
+## 7. Diseño Sonoro y Foley
+
+### 7.1 Fundamentos de Diseño Sonoro
+
+El diseño sonoro crea el universo acústico de la narrativa:
+- **Sonido Diegético:** Existe dentro del mundo de la historia (pasos, puertas, tráfico).
+- **Sonido No Diegético:** Externo al mundo de la historia (música extradiegética, narrador, efectos dramáticos).
+- **Transiciones:** Puentes sonoros que conectan escenas.
+- **Layering (Capas):** Un mismo efecto se construye con múltiples capas (ejemplo: un disparo = bang cercano + eco lejano + retumbo bajo + chasquido de casquillo).
+
+### 7.2 Foley
+
+El Foley es la recreación de sonidos cotidianos sincronizados a imagen en estudio de grabación especializado (Foley Stage):
+
+- **Foley de Pasos:** Diferentes superficies (madera, concreto, grava, hierba) con zapatos apropiados al personaje.
+- **Foley de Ropa (Cloth):** Captura del roce de telas para dotar de presencia física a los movimientos.
+- **Foley de Props:** Manipulación de objetos (cubiertos, papeles, herramientas).
+- **Foley de Efectos Especiales:** Creación de sonidos orgánicos para elementos que no existen (naves espaciales, criaturas).
+
+**Artistas de Foley Reconocidos:**
+- John Roesch (Matrix, Inception, Mad Max: Fury Road)
+- Gary Hecker (Jurassic Park, Spider-Man, 300)
+
+### 7.3 Bibliotecas de Sonido Profesionales
+
+- **Boom Library:** Efectos de alta calidad con metadatos UCS (Universal Category System).
+- **Soundly:** Plataforma de búsqueda con suscripción a bibliotecas profesionales + arrastrar directo a DAW.
+- **Pro Sound Effects:** Distribuidora oficial de bibliotecas de cine y TV.
+- **A Hiss and a Roar:** Efectos especializados (cuerpo, criaturas, texturas).
+- **Freesound.org:** Comunidad de sonidos gratuitos con licencias Creative Commons.
+
+### 7.4 Síntesis de Audio para Diseño Sonoro
+
+- **Sintetizadores:** Serum, Massive X, Omnisphere 2 para crear texturas, drones y efectos imposibles de grabar.
+- **Síntesis Granular:** Descompone un sonido en partículas (granos) y las reordena en el tiempo y frecuencia. Ideal para texturas evolutivas y transformación de sonidos orgánicos.
+- **Síntesis Modular (VCV Rack, Reaktor):** Creación de paisajes sonoros mediante módulos de osciladores, filtros y moduladores.
+
+---
+
+## 8. Tabla Comparativa de Micrófonos
 
 | Micrófono | Tipo | Patrón Polar | Sensibilidad (mV/Pa) | Uso Principal | Precio Aprox. (USD) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -162,10 +296,12 @@ La mezcla final se realiza en estudios calibrados siguiendo estándares de monit
 | DPA 4060 | Electret | Omnidireccional | 20 | Lavalier referencia | $480 |
 | Sanken COS-11D | Electret | Omnidireccional | 8.5 | Lavalier estándar cine | $390 |
 | Countryman B6 | Electret | Omnidireccional | 4 | Lavalier oculto | $430 |
+| Coles 4038 | Cinta | Figura-8 | 0.6 | Estudio, cuerdas, vintage | $1,300 |
+| Royer R-121 | Cinta | Figura-8 | 1.2 | Guitarras, metales | $1,300 |
 
 ---
 
-## 7. Referencias Citadas
+## 9. Referencias Citadas
 
 1.  Rose, Jay. (2015). *Producing Great Sound for Film and Video*. Focal Press.
 2.  Viers, Ric. (2012). *The Location Sound Bible*. Michael Wiese Productions.
@@ -177,3 +313,5 @@ La mezcla final se realiza en estudios calibrados siguiendo estándares de monit
 8.  Lectrosonics. *Catálogo de Sistemas Inalámbricos Digital Hybrid*. lectrosonics.com
 9.  European Broadcasting Union. (2020). *EBU R128: Loudness Normalisation*. ebu.ch
 10. Society of Motion Picture and Television Engineers. *SMPTE ST 2095-1: Calibration Reference*. smpte.org
+11. Everest, F. Alton. (2014). *Master Handbook of Acoustics*. McGraw-Hill.
+12. Holman, Tomlinson. (2010). *Sound for Film and Television*. Focal Press.
