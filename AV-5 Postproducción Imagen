@@ -1,0 +1,284 @@
+# Investigación de Postproducción Visual: Edición, Color, VFX y Entregas (V1.2)
+
+## 1. Flujo de Trabajo General
+
+La postproducción visual profesional sigue una secuencia estandarizada que varía según el tipo de proyecto (cine, publicidad, streaming, broadcast). Las fases son:
+
+1. **Offline Edit:** Montaje creativo con proxies de baja resolución.
+2. **Conformado:** Reemplazo de proxies por material original (RAW o master) mediante XML, AAF o EDL exportados desde el editor offline.
+3. **Online Finishing:** Color grading, VFX, títulos y retoques finales.
+4. **Masterización:** Generación del archivo maestro y derivados para distribución.
+5. **Control de Calidad (QC):** Verificación técnica antes de la entrega final.
+6. **Archivo y Preservación:** Almacenamiento a largo plazo del proyecto y materiales.
+
+### 1.1 Diferencias por Tipo de Proyecto
+
+| Tipo | Tiempo Típico | Formato de Trabajo | Revisión de Cliente |
+|------|--------------|-------------------|---------------------|
+| **Cine** | 3-6 meses | ACES, 4K/6K RAW | Proyección en sala calibrada |
+| **Publicidad** | 1-4 semanas | Rec.709/ACES, UHD | Revisión remota (Frame.io, Wipster) |
+| **Streaming** | 2-3 meses | ACES, Dolby Vision | QC automatizado + revisión remota |
+| **Broadcast TV** | 1-2 semanas | Rec.709, XDCAM | QC estricto (niveles legales, loudness) |
+
+---
+
+## 2. Conformado: De Offline a Online
+
+El conformado es el puente crítico entre edición y finishing. Los formatos de intercambio estándar son:
+
+- **XML (FCPX, Premiere Pro, DaVinci Resolve):** Conserva cortes, transiciones y clips, pero no efectos ni capas complejas.
+- **AAF (Avid Media Composer):** Soporta audio multicanal, efectos básicos y metadatos.
+- **EDL (Edit Decision List):** El más universal y ligero. Solo transporta cortes y transiciones básicas. Ideal para flujos de cine con gran cantidad de planos.
+
+**Flujo típico:**
+Premiere Pro / Avid / FCPX offline → exportar XML/AAF/EDL → importar en DaVinci Resolve → relink a archivos fuente (RAW, ProRes, etc.) → verificar conformidad → proceder a color grading.
+
+---
+
+## 3. Color Grading
+
+### 3.1 DaVinci Resolve como Estándar
+
+DaVinci Resolve (Blackmagic Design) es el estándar absoluto para color grading profesional, con versiones:
+- **DaVinci Resolve Studio:** Hasta 32K, 120 fps, Dolby Vision, HDR10+, múltiples GPUs.
+- **DaVinci Resolve Advanced Panel:** Panel de control físico con trackballs, ruedas y teclas programables. Estándar en suites de color.
+- **DaVinci Resolve Micro Panel:** Versión compacta para editores independientes.
+
+### 3.2 ACES (Academy Color Encoding System)
+
+ACES es el flujo de color estándar de la industria, diseñado por la Academy of Motion Picture Arts and Sciences. Sus componentes son:
+
+- **IDT (Input Device Transform):** Convierte el material nativo de cámara al espacio ACES. Existen IDTs para prácticamente todas las cámaras profesionales (ARRI, RED, Sony, Canon, Blackmagic, Panasonic).
+- **LMT (Look Modification Transform):** Aplicación de looks creativos dentro del espacio ACES.
+- **RRT (Reference Rendering Transform):** Transformación de referencia a espacio de salida.
+- **ODT (Output Device Transform):** Conversión a formato de entrega (SDR, HDR, cine, etc.).
+
+### 3.3 Espacios de Color de Trabajo
+
+- **ACEScct:** Curva logarítmica moderna con gamut ACES, diseñada para grading. Es el estándar actual (no Cineon, que es legacy de los años 90).
+- **DaVinci Wide Gamut / Intermediate:** Espacio de trabajo nativo de Resolve con gamut extremadamente amplio.
+- **Rec.709:** Espacio de entrega SDR tradicional (monitores y broadcast HD).
+- **Rec.2020 / DCI-P3:** Espacios de entrega HDR.
+- **Cineon log:** Sistema legacy de Kodak para digitalización de película. Hoy solo se usa para restaurar películas antiguas; no se recomienda para proyectos nuevos.
+
+### 3.4 Dolby Vision
+
+Dolby Vision es el estándar dominante para distribución HDR con metadatos dinámicos. El flujo incluye:
+
+- **Trim Pass:** Se calibra el contenido HDR y se derivan automáticamente versiones SDR, HDR10 y otras mediante metadatos.
+- **Análisis de shot:** Dolby Vision analiza cada plano para optimizar brillo y contraste.
+- **Metadatos dinámicos:** Se incrustan en el archivo maestro y controlan la reproducción en cada pantalla compatible.
+- **Levels:** Dolby Vision soporta hasta 10,000 nits de brillo máximo, aunque la mayoría de masters se gradúan a 1,000-4,000 nits.
+
+### 3.5 HDR10 y HDR10+
+
+- **HDR10:** Estándar abierto con metadatos estáticos (un solo valor de brillo máximo para todo el contenido).
+- **HDR10+:** Evolución con metadatos dinámicos (similar a Dolby Vision pero sin licencia).
+
+---
+
+## 4. Render y Optimización de Timeline
+
+### 4.1 Smart Render y Cacheo
+
+DaVinci Resolve y otros NLEs profesionales utilizan técnicas de optimización:
+
+- **Smart Render:** Solo se renderizan los frames modificados, dejando el resto intacto.
+- **Render Cache:** Pre-renderizado en segundo plano de clips con efectos pesados (denoising, estabilización, plugins OFX).
+- **Optimización de nodos:** Orden de operaciones para minimizar procesamiento (ej. colocar denoising al inicio de la cadena de nodos).
+
+### 4.2 Formatos de Archivo Maestro
+
+- **ProRes 4444 XQ:** Estándar de archivo maestro para preservar color 12 bits con compresión visualmente sin pérdida.
+- **ProRes 422 HQ:** Para masters SDR de distribución.
+- **DNxHR 444:** Alternativa a ProRes en Windows, con soporte 12 bits.
+- **OpenEXR:** Formato de archivo para VFX con soporte de 32-bit float, múltiples capas y pases de render.
+
+### 4.3 Tabla Completa de Codecs de Entrega
+
+| Codec | Profundidad | Compresión | Uso Principal |
+|-------|------------|------------|---------------|
+| **ProRes 4444 XQ** | 12-bit 4:4:4 | Visualmente sin pérdida | Archivo maestro HDR |
+| **ProRes 422 HQ** | 10-bit 4:2:2 | Alta calidad | Master SDR broadcast |
+| **DNxHR 444** | 12-bit 4:4:4 | Alta calidad | Master en Windows |
+| **DNxHR HQX** | 12-bit 4:2:2 | Alta calidad | Master HDR |
+| **XAVC Intra** | 10-bit 4:2:2 | Intra-frame | Broadcast Sony |
+| **XDCAM HD422** | 8-bit 4:2:2 | Long GOP | Entrega TV |
+| **AVC-Intra 100** | 10-bit 4:2:2 | Intra-frame | Broadcast Panasonic |
+| **H.264 All-I** | 8/10-bit 4:2:0 | Intra-frame | Web, redes sociales |
+| **H.265/HEVC** | 10-bit 4:2:0 | Inter-frame | Streaming 4K HDR |
+
+### 4.4 Proxies para Edición Offline
+
+- **ProRes Proxy (Apple):** Ligero, con timecode y metadatos.
+- **H.265/HEVC con timecode:** Alternativa moderna más eficiente en tamaño, soportado por la mayoría de editores modernos (Premiere, Resolve 19+, Avid MC 2024+).
+
+---
+
+## 5. VFX y Composición
+
+### 5.1 Profundidad de Bits
+
+- **32-bit float:** Estándar para composición profesional en Nuke y Fusion. Elimina clipping en highlights y permite operaciones de color extremas sin pérdida.
+- **16-bit float:** Para entregas finales y render de elementos que no requieren manipulación extrema.
+
+### 5.2 Formatos de Archivo VFX
+
+- **OpenEXR estándar:** Soporta 32-bit float, múltiples capas, pases de render (beauty, diffuse, specular, AO, Z, etc.).
+- **OpenEXR Deep:** Incluye muestras de profundidad por píxel para composición volumétrica precisa (niebla, humo, partículas). Estándar en producciones con CGI pesado.
+
+### 5.3 Software de Composición
+
+- **Nuke (Foundry):** Estándar absoluto para composición profesional en cine y televisión.
+- **Fusion (Blackmagic):** Integrado en DaVinci Resolve Studio. Potente para VFX general y motion graphics.
+- **After Effects (Adobe):** Motion graphics, títulos y composición ligera.
+
+### 5.4 IA en Postproducción
+
+La inteligencia artificial ha transformado flujos de trabajo:
+
+- **Upscaling con IA:** Topaz Video AI, DaVinci Resolve Super Scale (basado en redes neuronales) permiten escalar material HD a 4K/8K con resultados superiores a la interpolación tradicional.
+- **Rotoscopia automática:** Magic Mask de DaVinci Resolve, Runway ML, y Rotobrush 2.0 de After Effects utilizan machine learning para separar sujetos del fondo sin keying manual.
+- **Separación de stems de audio:** iZotope RX, LALAL.AI, y Ultimate Vocal Remover permiten aislar diálogos, música y efectos sin stems originales.
+- **Retoque facial y rejuvenecimiento:** Beauty Box, Resolve Face Refinement.
+
+---
+
+## 6. Metadatos y Flujo IMF
+
+### 6.1 IMF (Interoperable Master Format)
+
+IMF es el estándar SMPTE para empaquetado de masters de distribución. Componentes:
+
+- **CPL (Composition Playlist):** Define la línea de tiempo y las versiones (SDR, HDR, doblajes, subtítulos).
+- **OPL (Output Profile List):** Define los formatos de salida derivados del master.
+- **IMP (Interoperable Master Package):** El paquete final que contiene todos los assets y metadatos.
+
+IMF permite generar automáticamente versiones para Netflix, Amazon, broadcast y cine a partir de un solo archivo maestro, con metadatos de idioma, subtítulos, loudness y espacio de color.
+
+### 6.2 Metadatos en Flujo de Trabajo
+
+- **Metadatos de cámara:** ISO, T-stop, focal, balance de blancos, timecode.
+- **Metadatos editoriales:** Nombre de clip, duración, markers, notas de director.
+- **Metadatos de color:** CDL (Color Decision List), LUTs, ACES IDT/ODT.
+- **Metadatos de entrega:** Idioma, subtítulos, loudness, tipo de contenido.
+
+---
+
+## 7. Flujo de Trabajo Colaborativo
+
+### 7.1 Bases de Datos Compartidas
+
+DaVinci Resolve Project Server permite múltiples usuarios trabajando simultáneamente en el mismo proyecto:
+
+- **PostgreSQL:** Motor de base de datos estándar para trabajo colaborativo en Resolve.
+- **Blackmagic Cloud:** Sincronización remota con almacenamiento en la nube.
+- **Servidores compartidos:** NAS (QNAP, Synology) o SAN (StorNext, Avid NEXIS) para almacenamiento centralizado.
+
+### 7.2 Colaboración Remota
+
+- **Frame.io:** Revisión y aprobación remota con timecode preciso y anotaciones.
+- **Wipster:** Alternativa para revisiones rápidas.
+- **Evercast:** Streaming de sesiones de color en tiempo real con baja latencia.
+
+---
+
+## 8. Automatización con Python y Lua
+
+### 8.1 Scripting en DaVinci Resolve
+
+Resolve expone APIs completas en Python y Lua para automatizar tareas repetitivas:
+
+- **Automatización de exportación:** Scripts que generan automáticamente todos los formatos de entrega.
+- **Nomenclatura automática:** Renombrar clips según reglas personalizadas.
+- **Generación de reportes:** QC automatizado con logs de niveles, píxeles muertos y conformidad.
+- **Integración con Pipeline:** Conexión con ShotGrid, FTrack u otros gestores de producción.
+
+### 8.2 Scripting en Nuke
+
+Nuke expone una API Python completa para:
+- Creación automatizada de scripts de composición.
+- Render en granja (Deadline, Qube).
+- Control de versiones y publicaciones.
+
+---
+
+## 9. Control de Calidad (QC)
+
+El QC es la fase final antes de la entrega. Los parámetros verificados incluyen:
+
+- **Niveles de video:** Gamut legal (no superar 100 IRE en SDR, límites de nit en HDR).
+- **Píxeles muertos:** Detección de píxeles atascados o calientes.
+- **Banding:** Artefactos de gradiente en cielos o fondos suaves.
+- **Cuadros negros o congelados:** Detección automática de frames defectuosos.
+- **Loudness de audio:** Cumplimiento de estándares (-24 LKFS EBU, -27 LKFS Netflix).
+- **Sincronización audio/video:** Verificación de lip sync.
+- **Subtítulos:** Conformidad de timing, encoding y formato.
+
+Herramientas de QC automatizado: **Baton** (Interra Systems), **VidChecker**, **Philly** (Netflix internal).
+
+---
+
+## 10. Audio en Postproducción Visual
+
+### 10.1 Sincronización de Stems
+
+Los stems de audio (Diálogos, Música, Efectos) se sincronizan con el video en la fase de online finishing:
+
+- **OMF/AAF desde Pro Tools:** Importación de mezclas a DaVinci Resolve.
+- **Mezcla Dolby Atmos:** Archivos ADM BWF con objetos y beds.
+- **Loudness Normalization:** Ajuste final de loudness según plataforma.
+
+### 10.2 Deliverables de Audio
+
+| Formato | Canales | Uso |
+|--------|--------|-----|
+| **Estéreo** | 2.0 | Broadcast, web |
+| **5.1 Surround** | L R C LFE Ls Rs | Broadcast HD, DVD/Blu-ray |
+| **7.1.4 Dolby Atmos** | 7.1 + 4 overhead | Streaming premium, cine |
+
+---
+
+## 11. Entregas y Especificaciones por Plataforma
+
+| Plataforma | Resolución Máx. | Codec de Entrega | Bitrate Recom. | Loudness (Audio) | Espacio de Color |
+|-----------|----------------|-------------------|---------------|-------------------|-----------------|
+| **Netflix** | 4K UHD (3840×2160) | ProRes 422 HQ o IMF | Según IMF spec | -27 LKFS (ITU-R BS.1770) | ACES / Rec.2020 Dolby Vision |
+| **Amazon Prime** | 4K UHD | ProRes 422 HQ | 50-100 Mbps | -24 LKFS | Rec.2020 HDR10 / Dolby Vision |
+| **YouTube** | 8K | H.265 / VP9 | 150-300 Mbps (4K) | -14 LUFS | Rec.709 SDR / Rec.2020 HDR |
+| **Broadcast (TV)** | 1920×1080 | XDCAM HD422 o ProRes | 50 Mbps | -24 LKFS (EBU R128) | Rec.709 |
+| **Cine (DCP)** | 4K DCI (4096×2160) | XYZ TIFF / JPEG 2000 | 250 Mbps | — | DCI-P3 |
+| **Redes Sociales** | 1920×1080 (vertical 1080×1920) | H.264 | 10-20 Mbps | -14 LUFS | Rec.709 |
+
+---
+
+## 12. Archivo y Preservación
+
+### 12.1 Almacenamiento a Largo Plazo
+
+- **LTO (Linear Tape-Open):** Cinta magnética estándar para preservación. Versiones actuales: LTO-9 (18 TB nativos, 45 TB comprimidos).
+- **Checksums MD5/SHA-256:** Verificación de integridad de archivos archivados.
+- **Migración periódica:** Cada 3-5 años se migran los datos a nuevos formatos de almacenamiento para evitar obsolescencia.
+
+### 12.2 Qué Archivar
+
+- Archivo maestro final (ProRes 4444 XQ o IMF).
+- Archivos de proyecto (Resolve .drp, Premiere .prproj, Avid .avp).
+- Stems de audio y mezclas finales.
+- Metadatos de color (CDLs, LUTs, ACES config).
+- Material original de cámara (RAW o master de producción).
+
+---
+
+## 13. Referencias Citadas
+
+1.  Blackmagic Design. (2024). *DaVinci Resolve 19 Manual*. blackmagicdesign.com
+2.  Academy Color Encoding System (ACES). *ACES 2.0 Documentation*. acescentral.com
+3.  Dolby Laboratories. (2024). *Dolby Vision Professional Workflow Guide*. dolby.com
+4.  Foundry. (2024). *Nuke 15 Technical Specifications*. foundry.com
+5.  Netflix Partner Help Center. (2024). *Production and Post-Production Requirements*. partnerhelp.netflixstudios.com
+6.  Amazon Studios. (2024). *Prime Video Delivery Specifications*. studioproduction.amazon.com
+7.  European Broadcasting Union. (2020). *EBU R128: Loudness Normalisation*. ebu.ch
+8.  SMPTE. (2024). *Standards for Digital Cinema and IMF*. smpte.org
+9.  SMPTE. (2024). *IMF Specification ST 2067*. smpte.org
+10. LTO Consortium. (2024). *LTO-9 Technical Overview*. lto.org
