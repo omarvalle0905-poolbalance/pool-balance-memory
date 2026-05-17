@@ -1,0 +1,172 @@
+# Investigación Técnica de Cámaras de Cine Profesional — V1.3
+
+## 1. ARRI Alexa 35
+
+La ARRI Alexa 35 representa un salto generacional en la cinematografía digital Super 35. Monta un sensor ALEV 4 de 4.6K nativos con dimensiones de 27.99 × 19.22 mm (diagonal 33.96 mm), superando por primera vez el estándar S35 clásico. Su relación de aspecto nativa es 4:3 Open Gate.
+
+**Rango dinámico:**
+- 13.1 pasos con criterio SNR = 2 (fuente: medición de laboratorio CineD).
+- 15+ pasos con criterio SNR = 1 (fuente: medición de laboratorio CineD).
+- *Nota metodológica:* Los 15.1 pasos y 16.3 pasos reportados previamente en V1.2 no coinciden con las mediciones independientes más recientes. Se adoptan los valores verificados de CineD.
+
+**Sensibilidad mejorada (Enhanced Sensitivity):**
+A diferencia del Dual Native ISO tradicional (que utiliza dos circuitos de ganancia físicamente separados), el sistema "Enhanced Sensitivity" de ARRI optimiza la relación señal-ruido mediante procesamiento digital avanzado. Esto permite elevar la sensibilidad equivalente hasta EI 6400 sin penalización significativa de ruido, aunque físicamente opera sobre una única ruta de ganancia nativa de EI 800.
+
+**Otros parámetros:**
+- Rolling shutter: 7.9 ms (Open Gate 4.6K).
+- Peso: 2.9 kg (cuerpo desnudo).
+- Consumo: ~85W.
+- Montura: LPL (compatible PL con adaptador).
+
+---
+
+## 2. ARRI Alexa Mini LF
+
+Sensor de formato grande (Large Format) con dimensiones 36.70 × 25.54 mm, ligeramente superior al Full Frame fotográfico. Utiliza el sensor ALEV III (misma arquitectura que la Alexa LF original y la Alexa SXT W, pero en formato LF).
+
+- Resolución máxima: 4.5K Open Gate (4448 × 3096).
+- Rango dinámico: 14+ pasos (declaración de fabricante).
+- Rolling shutter: ~7.0 ms en Open Gate.
+- Peso: ~2.6 kg (cuerpo desnudo).
+- Montura: LPL.
+
+---
+
+## 3. ARRI Amira
+
+Diseñada como cámara docu-style y producciones rápidas. Utiliza el sensor ALEV III Super 35, mismo que la Alexa Mini original.
+
+- Dimensiones sensor en 16:9: 26.40 × 14.85 mm.
+- Dimensiones sensor en Open Gate: 28.17 × 18.13 mm.
+- Resolución máxima: 3.8K UHD.
+- Rango dinámico: 14+ pasos (declaración de fabricante, heredado del sensor ALEV III).
+
+---
+
+## 4. RED V-Raptor [X] y V-Raptor 8K VV
+
+La línea V-Raptor se divide en dos generaciones:
+
+**V-Raptor 8K VV (original):**
+- Sensor 35.4 MP, obturador rolling.
+- Rango dinámico: ~13.7 pasos SNR=2 / ~15 pasos SNR=1 (medición CineD sobre la V-Raptor original).
+
+**V-Raptor [X] y V-Raptor XL [X]:**
+- Obturador global (0 ms de rolling shutter).
+- Latitud de exposición en pruebas independientes (CineD): aproximadamente 9-10 pasos.
+- *Nota:* RED declara 17+ pasos de rango dinámico para estos modelos. Se requiere verificación independiente adicional. La cifra debe citarse como "declaración de fabricante" hasta que existan mediciones de laboratorio publicadas.
+
+---
+
+## 5. Sony Venice 2
+
+- Sensor 8.6K full-frame.
+- Grabación: 8.6K a 30 fps en Open Gate, 4K a 120 fps.
+- Rolling shutter: 3.0 ms.
+- Peso: 4.3 kg (cuerpo).
+- Rango dinámico: 15+ pasos (declaración de fabricante).
+
+---
+
+## 6. Sony Burano
+
+- Sensor 8.6K full-frame (misma arquitectura que Venice 2, recortada en features).
+- Rolling shutter: ~18.9 ms en 8.6K FF (medición CineD).
+- *Nota:* Con firmware v2.0, el rolling shutter en modo UHD Full-Frame mejora a 6 ms. El valor de ~10 ms reportado en V1.2 no coincide con las mediciones independientes.
+
+---
+
+## 7. Sony A7S III (Híbrida)
+
+- Sensor 12.1 MP full-frame.
+- Rango dinámico: 11.3 pasos SNR=2 (medición CineD).
+- Códecs internos: XAVC S (H.264 Long GOP), XAVC HS (H.265/HEVC de 10 bits, eficiente para flujos de postproducción ligeros).
+- *Nota sobre H.265/HEVC:* Este códec, presente en la mayoría de cámaras híbridas modernas (Sony, Canon, Panasonic, Nikon), permite una compresión más eficiente que H.264 manteniendo 10 bits de color. Es ideal para entregas rápidas y flujos donde el tamaño de archivo es crítico.
+
+---
+
+## 8. Canon EOS C400
+
+- Sensor 6K full-frame CMOS con triple base ISO (800 / 3200 / 12800).
+- Rolling shutter: ~14.7 ms en modo 6K Full-Frame (medición CineD).
+- *Nota:* El valor de ~4.5 ms reportado en V1.2 probablemente corresponde a un modo recortado Super 35 o a una medición con criterio distinto. Se corrige al dato verificado en 6K FF.
+
+---
+
+## 9. Canon EOS C300 Mark III
+
+- Sensor Super 35 DGO (Dual Gain Output), que combina dos lecturas de ganancia por fotodiodo para expandir el rango dinámico.
+- Rango dinámico: 12.8 pasos SNR=2 y 14.2 pasos SNR=1 (medición CineD). Dato verificado, sin cambios respecto a V1.2.
+
+---
+
+## 10. Blackmagic URSA Cine 12K LF
+
+- Sensor 12K full-frame.
+- Rolling shutter: ~12 ms en 12K Open Gate; ~5.5 ms en 4K 17:9 (medición CineD). Ambos valores deben citarse para evitar confusión.
+
+---
+
+## 11. Nikon Z9 / Z8 (Híbridas)
+
+- Sensor 45.7 MP full-frame (Z9 y Z8 comparten arquitectura).
+- Grabación interna: 8K ProRes RAW, 4K 120p en H.265 de 10 bits.
+- Ampliamente utilizadas en producciones profesionales como cámaras B o principales cuando el factor de forma y peso son críticos.
+
+---
+
+## 12. Tablas de Referencia
+
+### Tabla 1: Cámaras de Alta Gama
+
+| Cámara | Sensor | Res. Máx. | DR (SNR=2) | DR (SNR=1) | Rolling Shutter | Peso Cuerpo |
+|--------|--------|-----------|------------|------------|----------------|--------------|
+| ARRI Alexa 35 | S35 ALEV 4 (27.99 × 19.22 mm) | 4.6K | 13.1 (CineD) | 15+ (CineD) | 7.9 ms | 2.9 kg |
+| ARRI Alexa Mini LF | LF ALEV III (36.70 × 25.54 mm) | 4.5K | — | 14+ (fab.) | ~7.0 ms | ~2.6 kg |
+| RED V-Raptor [X] | FF Global Shutter | 8K | ~9-10 (CineD) | 17+ (fab.) | 0 ms | — |
+| RED V-Raptor 8K VV | FF Rolling | 8K | ~13.7 (CineD) | ~15 (CineD) | — | — |
+| Sony Venice 2 | FF 8.6K | 8.6K | — | 15+ (fab.) | 3.0 ms | 4.3 kg |
+| Sony Burano | FF 8.6K | 8.6K | — | — | 18.9 ms (6 ms UHD) | — |
+
+### Tabla 2: Cámaras de Gama Media y Producción Rápida
+
+| Cámara | Sensor | Res. Máx. | DR (SNR=2) | DR (SNR=1) | Rolling Shutter |
+|--------|--------|-----------|------------|------------|----------------|
+| Canon C400 | FF 6K | 6K | — | — | ~14.7 ms |
+| Canon C300 III | S35 DGO | 4K | 12.8 (CineD) | 14.2 (CineD) | — |
+| ARRI Amira | S35 ALEV III | 3.8K | — | 14+ (fab.) | — |
+| RED Komodo-X | S35 Global Shutter | 6K | — | — | 0 ms |
+
+### Tabla 3: Cámaras Híbridas (Foto/Video)
+
+| Cámara | Sensor | Res. Máx. Video | DR (SNR=2) | Códecs |
+|--------|--------|----------------|------------|--------|
+| Sony A7S III | FF 12.1 MP | 4K 120p | 11.3 (CineD) | XAVC S (H.264), XAVC HS (H.265) |
+| Nikon Z9 / Z8 | FF 45.7 MP | 8K ProRes RAW | — | ProRes, H.265 |
+
+---
+
+## 13. Nota Metodológica sobre Cifras de Rango Dinámico
+
+Todas las cifras de rango dinámico en este documento deben leerse con su fuente indicada:
+
+- **(fab.):** Declaración del fabricante. No verificada independientemente.
+- **(CineD):** Medición de laboratorio publicada por CineD (cined.com/lab-tests). SNR = 2 salvo indicación contraria.
+- **(est.):** Estimación basada en sensores equivalentes o pruebas de campo.
+
+Esta distinción es crítica para que la Gem no trate datos de fabricante y datos de laboratorio como equivalentes.
+
+---
+
+## 14. Referencias Citadas
+
+1.  CineD. (2024). *Laboratory Tests: ARRI Alexa 35 Dynamic Range*. cined.com
+2.  CineD. (2024). *Laboratory Tests: Canon EOS C400 Rolling Shutter*. cined.com
+3.  CineD. (2024). *Laboratory Tests: Sony Burano Rolling Shutter*. cined.com
+4.  CineD. (2024). *Laboratory Tests: Sony A7S III Dynamic Range*. cined.com
+5.  CineD. (2024). *Laboratory Tests: RED V-Raptor 8K VV Dynamic Range*. cined.com
+6.  CineD. (2024). *Laboratory Tests: Blackmagic URSA Cine 12K LF*. cined.com
+7.  ARRI. (2024). *Alexa 35 Technical Specifications*. arri.com
+8.  RED Digital Cinema. (2024). *V-Raptor [X] Technical Specifications*. red.com
+9.  Sony Professional. (2024). *Venice 2 Specifications*. sony.com/professional
+10. Canon Professional. (2024). *EOS C400 Specifications*. canon.com/professional
