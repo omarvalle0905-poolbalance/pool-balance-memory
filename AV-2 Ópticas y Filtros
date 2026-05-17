@@ -1,0 +1,195 @@
+# Investigación Técnica Exhaustiva sobre Ópticas Profesionales para Cinematografía y Sistemas de Filtrado Avanzado (V1.2)
+
+## Fundamentos Ópticos y Mecánicos en la Cinematografía de Alta Gama
+
+El análisis riguroso de las ópticas profesionales para la producción de cine y video requiere una comprensión profunda de los principios físicos, mecánicos y estéticos que separan un lente de cine dedicado de una óptica fotográfica estándar. La evaluación de una familia de lentes no se limita a su poder de resolución estática, sino a cómo gestiona la transmisión de la luz, las aberraciones esféricas y cromáticas, y su operabilidad en un entorno de producción donde la consistencia y la fiabilidad son imperativas.
+
+### T-stop vs. f-stop: La Física de la Transmisión Luminosa
+
+La exposición en la cinematografía exige una consistencia matemática estricta que permita igualar múltiples cámaras y lentes en un mismo set sin variaciones de densidad lumínica. El número f (f-stop) es una medida puramente geométrica que representa la relación matemática entre la distancia focal y el diámetro de la pupila de entrada (f/D). Sin embargo, esta fórmula teórica no contabiliza la pérdida de luz real que ocurre al atravesar múltiples elementos de cristal y recubrimientos anti-reflectantes. 
+
+El T-stop (Transmission stop) es una medida calibrada empíricamente que indica la cantidad exacta de luz que llega efectivamente al plano focal. En una producción multicámara, ajustar todas las ópticas a T2.8 garantiza una exposición idéntica, independientemente de si un lente tiene cinco elementos internos y otro tiene veinte.
+
+### Fenómenos Ópticos: Breathing y Focus Shift
+
+El focus breathing (respiración del enfoque) es una anomalía óptica que se manifiesta como una alteración del ángulo de visión (o magnificación) cuando se ajusta la distancia de enfoque. En el lenguaje cinematográfico, una respiración severa distrae al espectador durante un rack focus (cambio de foco entre sujetos), revelando el artificio mecánico de la cámara. Las ópticas de cine de alta gama utilizan grupos de lentes con elementos flotantes impulsados por levas complejas para mantener el ángulo de visión constante independientemente de la distancia de enfoque.
+
+El focus shift (desplazamiento de foco) ocurre cuando el punto de enfoque óptimo cambia hacia adelante o hacia atrás al cerrar el diafragma. Este fenómeno es causado por aberraciones esféricas residuales no corregidas en los bordes extremos de los cristales. Las ópticas premium como las ARRI Master Prime y las Zeiss Supreme Prime están diseñadas y pulidas para eliminar este fenómeno por completo, asegurando que el foco permanezca crítico al alterar el T-stop.
+
+### Cobertura de Sensor: Evolución del Círculo de Imagen
+
+El círculo de imagen que proyecta una lente determina su capacidad para cubrir sin viñeteo mecánico o caída de luz severa (shading) los distintos tamaños de sensores digitales modernos:
+
+- **Super 35 (S35):** Círculo de imagen aproximado de 28 mm a 31.5 mm. Ha sido el estándar histórico del cine (ej. ARRI Alexa Mini, RED Komodo).
+- **Full Frame (FF):** Círculo de imagen de aproximadamente 43.3 mm, equivalente a la fotografía de 35mm (36 x 24 mm). Permite un campo de visión más amplio y menor profundidad de campo a distancias focales equivalentes.
+- **VistaVision (VV):** Ligeramente mayor al Full Frame estándar, alcanzando círculos de ~46.5 mm (ej. RED Monstro 8K VV).
+- **65mm / Formato Medio:** Sensores masivos que requieren círculos de imagen superiores a 60 mm (ej. ARRI Alexa 65).
+
+### Compatibilidad de Monturas: PL y LPL
+
+La montura PL (Positive Lock) introducida por ARRI ha sido el estándar inamovible de la industria cinematográfica, caracterizándose por un anclaje de cuatro aletas con una distancia de brida (flange focal distance) de 52 mm y un diámetro interno de 54 mm. 
+
+Con el advenimiento de los sensores de gran formato y la necesidad de ópticas más rápidas, ARRI introdujo la montura LPL (Large Positive Lock). La montura LPL reduce la distancia de brida a 44 mm y amplía el diámetro a 62 mm. Esta geometría más amplia y cercana al sensor permite diseños ópticos telecéntricos más eficientes, reduciendo drásticamente el peso de las ópticas angulares y mejorando la iluminación en las esquinas del sensor. Existe una compatibilidad unidireccional: un lente PL clásico puede usarse en una cámara LPL mediante un adaptador mecánico simple (PL-to-LPL), pero un lente LPL no puede montarse en una cámara PL debido a que el elemento trasero chocaría con el sensor y la física de la distancia de brida lo hace ópticamente imposible.
+
+### El Carácter Anamórfico: Squeeze Factor y Mumps
+
+Los lentes anamórficos utilizan elementos cilíndricos para comprimir la imagen horizontalmente en el sensor, requiriendo una descompresión (desqueeze) en el proceso de postproducción. El squeeze factor tradicional diseñado para celuloide 4:3 es de 2x, entregando un aspecto final panorámico de 2.39:1. En la era del cine digital, donde los sensores tienen geometrías nativas de 16:9 o 17:9, utilizar un factor 2x resulta en una imagen demasiado ancha que requiere recortar drásticamente los laterales. Por ello, factores como 1.33x, 1.5x, 1.6x y 1.8x se han estandarizado para optimizar el uso del sensor digital.
+
+El síndrome de anamorphic mumps (paperas anamórficas) es una anomalía óptica histórica observada en las primeras ópticas CinemaScope, donde el factor de compresión horizontal disminuía a medida que el anillo de enfoque se movía hacia la distancia mínima. Esto causaba que los rostros de los actores se vieran artificialmente ensanchados o inflados en los primeros planos. Las ópticas anamórficas modernas corrigen esta anomalía mediante la colocación cuidadosa de los bloques cilíndricos o mediante grupos de astigmatismo duales que mantienen el squeeze constante.
+
+---
+
+## Análisis de Familias de Ópticas Esféricas Profesionales
+
+La dicotomía central en el diseño de lentes esféricos contemporáneos es la elección entre un "render clínico" y un "render orgánico". Un render clínico prioriza la máxima transferencia de modulación (MTF), alto contraste, resolución inmaculada de esquina a esquina y la eliminación absoluta de aberraciones cromáticas (ej. Zeiss Master Prime). Por el contrario, un render orgánico acepta o introduce ciertas imperfecciones calculadas, como una ligera caída de resolución en los bordes, un menor micro-contraste para suavizar texturas de piel, destellos pictóricos y un focus falloff muy gradual (ej. Cooke S8/i, ARRI Signature).
+
+### ARRI: Ingeniería Óptica y la Identidad Signature
+
+**ARRI Signature Prime y Signature Zoom:** Diseñadas nativamente para sensores de gran formato (cobertura hasta 46mm) y utilizando la montura LPL. Rompiendo con la frialdad clínica de las Master Primes, las Signature ofrecen un carácter decididamente orgánico: tonos de piel cálidos, focus falloff excepcionalmente suave y un bokeh limpio. Se construyen con carcasas de magnesio, haciendo que un 35mm T1.8 pese apenas 1.7 kg. Cabe destacar que la apertura máxima varía: el 12mm abre a T2.1, mientras que el resto de focales angulares y medias abren a T1.8. Cuentan con un portafiltros magnético trasero.
+
+Los Signature Zooms mantienen la misma filosofía. Para extender la focal 65-300mm T2.8, ARRI diseñó un extensor dedicado de 1.7x que la transforma en un 110-510mm T4.95.
+
+| Familia y Especificaciones | Focales Disponibles (mm) | T-Stop Máx | Formato (Círculo) | Distancia Mínima de Enfoque | Peso Promedio | Montura | Diámetro Frontal |
+| ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| ARRI Signature Prime | 12, 15, 18, 21, 25, 35, 47, 58, 75, 95, 125, 150, 200, 280 | T1.8 (T2.1 en 12mm, T2.5/2.8 en 200 y 280mm) | LFF (hasta 46mm) | 0.13m (en 25/35mm) | 1.7 kg a 4.3 kg | LPL | 114 mm (134mm en 280mm) |
+| ARRI Signature Zoom | 16-32, 24-75, 45-135, 65-300 (con Extender 1.7x) | T2.8 | LFF (hasta 46mm) | 0.19m (en 16-32) | 3.2 kg a 8.7 kg | LPL | 114 mm a 156 mm |
+
+### Cooke Optics: El Legado del "Cooke Look"
+
+El venerado "Cooke Look" describe una nitidez balanceada, contraste aterciopelado que halaga rostros humanos, flare cálido y una transición de foco analógica. Incorporan tecnología /i para metadatos VFX.
+
+**Cooke S4/i, S7/i FF+ y S8/i:** Las S4/i (T2.0) son el estándar Super 35. Las S7/i FF+ (T2.0) rediseñaron la fórmula para cubrir círculos de imagen de 46.31 mm. Las S8/i FF representan el estado del arte: velocidad asombrosa de T1.4 en formato Full Frame, contraste orgánico y chasis muy ligero.
+
+**Cooke Varotal y Panchro/i Classic:** La línea Varotal ofrece lentes zoom Full Frame (19-40mm, 30-95mm, 85-215mm a T2.9). Las Panchro/i Classic FF son reconstrucciones de los legendarios Speed Panchros, distinguiéndose por un bokeh "ojo de gato", viñeteo intencional y estética vintage.
+
+| Familia y Especificaciones | Focales Disponibles (mm) | T-Stop Máx | Formato (Círculo) | Distancia Mínima de Enfoque | Peso Promedio | Montura | Diámetro Frontal |
+| ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| Cooke S4/i | 12, 14, 16, 18, 21, 25, 27, 32, 40, 50, 65, 75, 100, 135, 150, 180, 300 | T2.0 | S35 | 0.23m a 0.9m | 1.8 kg a 2.5 kg | PL / LPL | 110 mm |
+| Cooke S7/i FF+ | 16, 18, 21, 25, 27, 32, 40, 50, 65, 75, 100, 135, 180, 300 | T2.0 | FF+ (46.31 mm) | 0.35m a 1.0m | 2.5 kg a 3.5 kg | PL / LPL | 110 mm |
+| Cooke S8/i FF | 25, 32, 40, 50, 75, 100, 135 | T1.4 | FF+ (46.31 mm) | 0.55m (25mm) | 2.1 kg a 3.1 kg | PL / LPL | 104 mm |
+| Panchro/i Classic FF | 18, 21, 25, 27, 32, 40, 50, 65, 75, 100, 135, 152 | T2.2 a T2.6 | FF / S35 | 0.2m a 0.6m | 1.0 kg a 1.6 kg | PL / LPL | 110 mm |
+
+### ZEISS: La Búsqueda de la Precisión Alemana
+
+**Zeiss Supreme Prime, Supreme Prime Radiance y Master Prime:** Las Master Prime (S35, T1.3) fijaron un hito histórico eliminando el respirar y el focus shift, logrando el pináculo del render clínico. Las Supreme Prime llevan esto al Full Frame a T1.5, con un diámetro frontal estandarizado de 95mm.
+Las Supreme Prime Radiance aplican el recubrimiento T blue*, generando flares cálidos sin sacrificar la transmisión de luz ni contrastes, logrando estética sin perder precisión clínica.
+
+| Familia y Especificaciones | Focales Disponibles (mm) | T-Stop Máx | Formato (Círculo) | Distancia Mínima de Enfoque | Peso Promedio | Montura | Diámetro Frontal |
+| ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| ZEISS Master Prime | 12, 14, 16, 18, 21, 25, 27, 32, 35, 40, 50, 65, 75, 100, 135, 150 | T1.3 | S35 | 0.35m a 0.9m | 2.6 kg a 2.9 kg | PL | 114 mm |
+| ZEISS Supreme Prime | 15, 18, 21, 25, 29, 35, 40, 50, 65, 85, 100, 135, 150, 200 | T1.5 (T1.8 en 15mm, T2.1 en 200mm) | FF / VV (46.3mm) | 0.26m a 1.4m | 1.2 kg a 1.7 kg | PL / LPL | 95 mm (114mm ext.) |
+| Supreme Prime Radiance | 18, 21, 25, 29, 35, 40, 50, 65, 85, 100, 135 | T1.5 | FF / VV | 0.26m a 1.4m | 1.2 kg a 2.2 kg | PL | 95 mm |
+
+### Leitz / Leica Cine: Emoción Visual y Rendimiento Micro-Contraste
+
+**Leitz Thalia, Summilux-C y Summicron-C:** La familia Thalia es una rareza mecánica que entrega 60 mm de cobertura útil sobre el sensor ARRI Alexa 65 (54.12 × 25.58 mm), destacando por su "analog focus falloff". Las Summilux-C (T1.4) son legendarias en S35 por su iluminación de campo plano.
+Las **Leitz Hugo** toman las fórmulas ópticas de telémetro Leica M y las recarrozan en chasis de cine LPL, dotando a la imagen de una tridimensionalidad romántica y rica reproducción cromática.
+
+| Familia y Especificaciones | Focales Disponibles (mm) | T-Stop Máx | Formato (Círculo) | Distancia Mínima de Enfoque | Peso Promedio | Montura | Diámetro Frontal |
+| ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| Leitz Thalia | 24, 30, 35, 45, 55, 70, 100, 120, 180 | T2.6 a T3.6 | Alexa 65 (60mm útil) | 0.50m (en 70mm) | 1.0 kg a 1.6 kg | PL / LPL | 95 mm |
+| Summilux-C | 16, 18, 21, 25, 29, 35, 40, 50, 65, 75, 100 | T1.4 | S35 | 0.45m | 1.6 kg a 1.8 kg | PL Titanio | 95 mm |
+
+### Sistemas Modulares y Zooms de Alta Gama: Angénieux
+
+**EZ-1, EZ-2 y Type EZ Anamorphic:** Representan una revolución mediante la tecnología IRO (Interchangeable Rear Optics). El diseño permite intercambiar el bloque trasero para modificar la cobertura del sensor.
+Es importante aclarar que el cambio de T-stop (ej. de T2.0 en S35 a T3.0 en FF) es una consecuencia puramente óptica del cambio del grupo trasero multiplicador (IRO), y no una limitación mecánica del diafragma.
+
+| Familia y Especificaciones | Rango Focal (S35 / FF) | T-Stop Máx | Formato | Distancia Mínima de Enfoque | Peso Promedio | Montura | Frontal |
+| ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| Type EZ-1 | 30-90mm (S35) / 45-135mm (FF) | T2.0 (S35) / T3.0 (FF) | S35 y FF/VV | 0.60m | 2.1 kg | PL/EF/E | 114 mm |
+
+### Evolución y Accesibilidad en Lentes de Cine Esféricos
+
+**Tokina Vista Prime y Vista One:** Cubren enormes formatos FF/VV manteniendo T1.5. Cabe destacar que la serie Vista One (single-coated, flares azules) fue una edición limitada y algunos distribuidores la reportan como descontinuada desde 2024.
+
+**Sigma FF High Speed Prime y Classic:** Las FF High Speed (T1.5) ofrecen resolución clínica inmaculada. La serie Sigma Classic ensambla cristales sin multirrecubrimiento, degradando la transmisión de luz y generando destellos vintage. A diferencia de las High Speed, las Classic Art Prime no tienen un T-stop constante; la transmisión varía por focal.
+
+| Familia Sigma Classic | T-Stop Máx | Formato | Peso Promedio | Montura | Diámetro Frontal |
+| ------ | ------ | ------ | ------ | ------ | ------ |
+| 14mm | T3.2 | FF | 1.2 kg | PL | 95 mm |
+| 20mm, 24mm, 28mm, 35mm, 40mm, 50mm, 85mm, 105mm | T2.5 | FF | 1.1 kg a 1.6 kg | PL | 95 mm |
+| 135mm | T3.2 | FF | 1.6 kg | PL | 95 mm |
+
+---
+
+## El Renacimiento Anamórfico: De la Alta Gama a la Democratización
+
+**ARRI Master Anamorphic y Cooke Anamorphic/i:** Las Master Anamorphic (2x Squeeze) ubican el grupo cilíndrico en el centro, eliminando respiración y mumps de forma clínica. La filosofía de Cooke Anamorphic/i FF se alinea al render orgánico con un Squeeze factor de 1.8x, calculando este "sweet spot" para optimizar el sensor Full Frame. Presentan velocidades de T2.3 en focales centrales y T3.2 en los extremos (25mm y 135mm).
+
+**Atlas Lens Co. Orion y Mercury:** Atlas Orion (S35, T2.0, 2x Squeeze) utiliza diseño frontal clásico con waterfall bokeh. Ante la demanda de gran formato, lanzaron los Atlas Mercury: no deben confundirse con las Orion Silver Edition; los Mercury son nativos 1.5x a T2.2 diseñados específicamente para el formato Full Frame, reduciendo el tamaño a la mitad.
+
+**Laowa Nanomorph:** Son el diseño anamórfico más pequeño creado (menos de 400g). Existen múltiples variantes en la familia Nanomorph: la línea original 1.5x (S35) que ofrece opciones de destellos en colores Ámbar, Azul o Plata, y una variante 2x Nanomorph anunciada posteriormente para maximizar el factor de compresión.
+
+| Familia Anamórfica | Formato | Squeeze | T-Stop Máx | Arquitectura | Montura | Frontal |
+| ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| Cooke Anamorphic/i FF | FF | 1.8x | T2.3 (T3.2 extremos) | Híbrido Cilíndrico | PL/LPL | 110 mm |
+| Atlas Mercury | FF | 1.5x | T2.2 | Frontal | PL | 95 mm |
+| Laowa Nanomorph | S35 | 1.5x / 2x | T2.4 / T2.8 | Híbrido Compacto | PL/EF/E/RF/MFT | 77mm/80mm |
+
+---
+
+## Lentes Fotográficos Usados Profesionalmente (Híbridos)
+
+El uso de sistemas mirrorless ha impulsado la integración de ópticas fotográficas de alta gama (Sony G Master, Canon RF L, Nikon Z S-Line). Otorgan poderes de resolución superiores y erradican aberraciones cromáticas. Sin embargo, su adopción conlleva desafíos físicos:
+1. **Mecánica Focus-By-Wire:** Los anillos envían pulsos a un motor; si el desplazamiento no es lineal, es matemáticamente imposible que un foquista marque un Follow Focus con repetibilidad.
+2. **Focus Breathing Descontrolado.**
+3. **Incompatibilidad Plena:** Distancias de brida muy cortas (18-20mm) imposibilitan su adaptación a cámaras con monturas PL de cine.
+
+---
+
+## Sistemas de Filtrado Profesional y Modulación Estética
+
+### Filtros ND e IRND (Densidad Neutra)
+El gran desafío contemporáneo es la Contaminación Infrarroja (IR Pollution). Para erradicar esto, destacan referencias profesionales clave como los **Tiffen Full Spectrum IRND**, **Schneider**, **NiSi** y los innovadores **Bright Tangerine Misfit ND** (que utilizan vidrio True-Match IRND). Estos cortan de manera tajante las frecuencias del Infrarrojo Lejano.
+
+### Filtros de Difusión, Halación y Textura
+Los filtros de difusión actúan como un rompedor de resolución selectivo.
+- **Tiffen Black Pro-Mist y White Pro-Mist:** Fabricados con el ColorCore™ Process (proceso de laminación en caliente) de Tiffen. El BPM incorpora un patrón puntillista negro para frenar la luz parásita en las sombras mientras crea halación en las luces.
+- **Alternativas de Difusión y Textura (Soft FX, Satin y Black Magic):** Para producciones que buscan suavizar texturas de piel sin el halo pesado del Pro-Mist, existen alternativas como **Tiffen Black Satin** (suaviza aportando un velo mínimo de grano), **Tiffen Soft FX** (difusión pura basada en micro-lentes que no causa blooming en las luces) y los populares **Schneider Hollywood Black Magic**, que son competencia directa del Glimmerglass al combinar difusión HD con un sutil black mist. En los sistemas modernos, destacan también las soluciones de inserción ultraligera como **NiSi Allure Mist** y el ecosistema **Tilta Mirage**.
+
+### Herramientas Estilísticas: Graduados, Corrección de Color, Polarizadores y Dioptrios
+- **Filtros Graduados (ND Grad Soft/Hard Edge):** Críticos para controlar cielos brillantes en exteriores, oscureciendo solo una porción del cuadro con transiciones suaves (Soft) o marcadas (Hard) hacia cristal transparente.
+- **Corrección de Color (CC):** Aunque el digital los ha desplazado parcialmente, los filtros 80-series (conversión tungsteno a día), 81-series (calentadores), y FLB/FLD (corrección fluorescente) siguen siendo el estándar para lograr bases colorimétricas perfectas orgánicamente.
+- **Polarizadores (Lineales vs Circulares):** En cámaras de cine tradicionales (ARRI/RED) se prefieren los polarizadores Lineales por su mayor eficiencia lumínica y menor costo. Sin embargo, en cámaras digitales híbridas con divisor de haz (split prism) para sistemas de autoenfoque o medición, es obligatorio el uso de polarizadores Circulares para no interferir con los sensores y el Eye-AF.
+- **Dioptrios de Aproximación (Close-Up Lenses):** Funcionan como lupas macro (ej. +1/2, +1, +2, +3). Destacan las opciones prístinas de Schneider True-Match. Existen dioptrios de campo dividido (Split Diopters), cortados físicamente por la mitad (como los +3 split-field), permitiendo enfocar un objeto macroscópico a la izquierda y montañas al infinito simultáneamente.
+
+---
+
+## Mantenimiento y Calibración Óptica Profesional
+
+El rigor del cine exige que las ópticas mantengan precisiones micrométricas.
+- **Colimación:** Ajuste del bloque óptico interno para garantizar que el lente alcance la nitidez matemática exacta en la marca de infinito (Infinity Focus), compensando expansiones térmicas o golpes.
+- **Back Focus (Flange Focal Distance):** Ajuste de la distancia exacta entre la base de la montura y el sensor de la cámara (ej. 52.00 mm en PL). 
+- **Shimming:** El proceso mecánico de calibración mediante la inserción o remoción de "shims" (anillos de metal o latón microscópicamente delgados, de 0.01 mm a 0.5 mm) en la base de la montura del lente para igualar perfectamente la distancia focal de brida con la de la cámara.
+
+---
+
+## Resumen Comparativo Final: Render Clínico vs Orgánico
+
+Esta tabla funciona como referencia rápida para la elección de ópticas según las necesidades narrativas y el perfil estético del proyecto.
+
+| Categoría Estética | Características Principales | Ópticas Representativas | Uso Narrativo Frecuente |
+| :--- | :--- | :--- | :--- |
+| **Clínico / Quirúrgico** | Máxima resolución, contraste alto, corrección matemática de aberraciones, nula respiración, nitidez de borde a borde. | ZEISS Master Prime, ZEISS Supreme Prime, Sigma FF High Speed, Tokina Vista. | Sci-Fi, Thrillers tecnológicos, Comerciales de producto automotriz/belleza, VFX pesados. |
+| **Orgánico / Balanceado** | Nitidez suave y halagadora en tonos de piel, focus falloff tridimensional gradual, flare cálido controlado, contraste medio. | ARRI Signature Prime, Cooke S4/i y S8/i, Leitz Summilux-C y Thalia, Angénieux Optimo. | Drama, Cine Histórico, Comerciales narrativos, Épicas donde el actor es prioridad. |
+| **Vintage / Carácter** | Distorsiones intencionales, viñeteo angular, bajo contraste general, destellos (flares) agresivos y velo lumínico (veiling glare). | Sigma Classic, Tokina Vista One, Cooke Panchro/i Classic FF, Leitz Hugo, Laowa Nanomorph. | Videos musicales, Fashion Films, Flashbacks narrativos, Emulación de celuloide antiguo. |
+
+---
+
+## Referencias
+
+1. ARRI Signature Prime y Zoom: https://www.arri.com/en/camera-systems/lenses/signature-prime
+2. Cooke Optics S4/i, S7/i, S8/i: https://www.cookeoptics.com/lenses.html
+3. Zeiss Supreme Prime y Master Prime: https://www.zeiss.com/cine/en/cine-lenses.html
+4. Leitz Cine Lenses: https://www.leitz-cine.com/
+5. Angénieux EZ Series: https://www.angenieux.com/cine-lenses/ez-series/
+6. Sigma Cine Lenses: https://www.sigma-global.com/en/cine-lenses/
+7. Tokina Cinema Vista: https://tokinacinema.com/
+8. Atlas Lens Co. Orion y Mercury: https://atlaslensco.com/
+9. Laowa Nanomorph: https://www.venuslens.net/product/laowa-nanomorph/
+10. Tiffen Filters: https://tiffen.com/
+11. Schneider Optics: https://schneiderkreuznach.com/en/cine-filters
+12. Bright Tangerine Misfit ND: https://www.brighttangerine.com/misfit-nd/
+13. Set Lighting Technician's Handbook, Harry C. Box, Focal Press
+14. American Cinematographer Manual, 10th Edition, ASC Press
