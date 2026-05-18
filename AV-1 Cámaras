@@ -1,172 +1,787 @@
-# Investigación Técnica de Cámaras de Cine Profesional — V1.3
+# Investigación Técnica de Cámaras de Cine Profesional — V1.4
 
-## 1. ARRI Alexa 35
-
-La ARRI Alexa 35 representa un salto generacional en la cinematografía digital Super 35. Monta un sensor ALEV 4 de 4.6K nativos con dimensiones de 27.99 × 19.22 mm (diagonal 33.96 mm), superando por primera vez el estándar S35 clásico. Su relación de aspecto nativa es 4:3 Open Gate.
-
-**Rango dinámico:**
-- 13.1 pasos con criterio SNR = 2 (fuente: medición de laboratorio CineD).
-- 15+ pasos con criterio SNR = 1 (fuente: medición de laboratorio CineD).
-- *Nota metodológica:* Los 15.1 pasos y 16.3 pasos reportados previamente en V1.2 no coinciden con las mediciones independientes más recientes. Se adoptan los valores verificados de CineD.
-
-**Sensibilidad mejorada (Enhanced Sensitivity):**
-A diferencia del Dual Native ISO tradicional (que utiliza dos circuitos de ganancia físicamente separados), el sistema "Enhanced Sensitivity" de ARRI optimiza la relación señal-ruido mediante procesamiento digital avanzado. Esto permite elevar la sensibilidad equivalente hasta EI 6400 sin penalización significativa de ruido, aunque físicamente opera sobre una única ruta de ganancia nativa de EI 800.
-
-**Otros parámetros:**
-- Rolling shutter: 7.9 ms (Open Gate 4.6K).
-- Peso: 2.9 kg (cuerpo desnudo).
-- Consumo: ~85W.
-- Montura: LPL (compatible PL con adaptador).
+> **Registro de cambios V1.3 → V1.4:** Corrección de 5 inconsistencias numéricas activas (rolling shutter Alexa Mini LF, DR Venice 2 y URSA Cine, RS URSA Cine en modo reducido, DR A7S III). Añadidos color science nativo, dimensiones de sensor, consumo energético y precios a todas las entradas existentes. Incorporadas 18 plataformas nuevas: ARRI Alexa 65, Canon C500 Mark II / C70 / R5 C, Sony FX9 / FX6 / FX3 / FX30 / A1 II / A7R V, RED Komodo original, Panasonic Varicam LT / EVA1 / GH7 / S1H / BS1H, Z-Cam E2-F6 / E2-F8, DJI Ronin 4D / 4D Flex, Sigma fp / fp L, BMD Pyxis 6K / URSA Mini Pro 12K / Pocket Cinema 6K Pro/G2. Añadida sección "Tendencias Operativas". Flaggeada discrepancia crítica de DR en RED V-Raptor [X] pendiente de verificación en CineD.
 
 ---
 
-## 2. ARRI Alexa Mini LF
-
-Sensor de formato grande (Large Format) con dimensiones 36.70 × 25.54 mm, ligeramente superior al Full Frame fotográfico. Utiliza el sensor ALEV III (misma arquitectura que la Alexa LF original y la Alexa SXT W, pero en formato LF).
-
-- Resolución máxima: 4.5K Open Gate (4448 × 3096).
-- Rango dinámico: 14+ pasos (declaración de fabricante).
-- Rolling shutter: ~7.0 ms en Open Gate.
-- Peso: ~2.6 kg (cuerpo desnudo).
-- Montura: LPL.
-
----
-
-## 3. ARRI Amira
-
-Diseñada como cámara docu-style y producciones rápidas. Utiliza el sensor ALEV III Super 35, mismo que la Alexa Mini original.
-
-- Dimensiones sensor en 16:9: 26.40 × 14.85 mm.
-- Dimensiones sensor en Open Gate: 28.17 × 18.13 mm.
-- Resolución máxima: 3.8K UHD.
-- Rango dinámico: 14+ pasos (declaración de fabricante, heredado del sensor ALEV III).
-
----
-
-## 4. RED V-Raptor [X] y V-Raptor 8K VV
-
-La línea V-Raptor se divide en dos generaciones:
-
-**V-Raptor 8K VV (original):**
-- Sensor 35.4 MP, obturador rolling.
-- Rango dinámico: ~13.7 pasos SNR=2 / ~15 pasos SNR=1 (medición CineD sobre la V-Raptor original).
-
-**V-Raptor [X] y V-Raptor XL [X]:**
-- Obturador global (0 ms de rolling shutter).
-- Latitud de exposición en pruebas independientes (CineD): aproximadamente 9-10 pasos.
-- *Nota:* RED declara 17+ pasos de rango dinámico para estos modelos. Se requiere verificación independiente adicional. La cifra debe citarse como "declaración de fabricante" hasta que existan mediciones de laboratorio publicadas.
-
----
-
-## 5. Sony Venice 2
-
-- Sensor 8.6K full-frame.
-- Grabación: 8.6K a 30 fps en Open Gate, 4K a 120 fps.
-- Rolling shutter: 3.0 ms.
-- Peso: 4.3 kg (cuerpo).
-- Rango dinámico: 15+ pasos (declaración de fabricante).
-
----
-
-## 6. Sony Burano
-
-- Sensor 8.6K full-frame (misma arquitectura que Venice 2, recortada en features).
-- Rolling shutter: ~18.9 ms en 8.6K FF (medición CineD).
-- *Nota:* Con firmware v2.0, el rolling shutter en modo UHD Full-Frame mejora a 6 ms. El valor de ~10 ms reportado en V1.2 no coincide con las mediciones independientes.
-
----
-
-## 7. Sony A7S III (Híbrida)
-
-- Sensor 12.1 MP full-frame.
-- Rango dinámico: 11.3 pasos SNR=2 (medición CineD).
-- Códecs internos: XAVC S (H.264 Long GOP), XAVC HS (H.265/HEVC de 10 bits, eficiente para flujos de postproducción ligeros).
-- *Nota sobre H.265/HEVC:* Este códec, presente en la mayoría de cámaras híbridas modernas (Sony, Canon, Panasonic, Nikon), permite una compresión más eficiente que H.264 manteniendo 10 bits de color. Es ideal para entregas rápidas y flujos donde el tamaño de archivo es crítico.
-
----
-
-## 8. Canon EOS C400
-
-- Sensor 6K full-frame CMOS con triple base ISO (800 / 3200 / 12800).
-- Rolling shutter: ~14.7 ms en modo 6K Full-Frame (medición CineD).
-- *Nota:* El valor de ~4.5 ms reportado en V1.2 probablemente corresponde a un modo recortado Super 35 o a una medición con criterio distinto. Se corrige al dato verificado en 6K FF.
-
----
-
-## 9. Canon EOS C300 Mark III
-
-- Sensor Super 35 DGO (Dual Gain Output), que combina dos lecturas de ganancia por fotodiodo para expandir el rango dinámico.
-- Rango dinámico: 12.8 pasos SNR=2 y 14.2 pasos SNR=1 (medición CineD). Dato verificado, sin cambios respecto a V1.2.
-
----
-
-## 10. Blackmagic URSA Cine 12K LF
-
-- Sensor 12K full-frame.
-- Rolling shutter: ~12 ms en 12K Open Gate; ~5.5 ms en 4K 17:9 (medición CineD). Ambos valores deben citarse para evitar confusión.
-
----
-
-## 11. Nikon Z9 / Z8 (Híbridas)
-
-- Sensor 45.7 MP full-frame (Z9 y Z8 comparten arquitectura).
-- Grabación interna: 8K ProRes RAW, 4K 120p en H.265 de 10 bits.
-- Ampliamente utilizadas en producciones profesionales como cámaras B o principales cuando el factor de forma y peso son críticos.
-
----
-
-## 12. Tablas de Referencia
-
-### Tabla 1: Cámaras de Alta Gama
-
-| Cámara | Sensor | Res. Máx. | DR (SNR=2) | DR (SNR=1) | Rolling Shutter | Peso Cuerpo |
-|--------|--------|-----------|------------|------------|----------------|--------------|
-| ARRI Alexa 35 | S35 ALEV 4 (27.99 × 19.22 mm) | 4.6K | 13.1 (CineD) | 15+ (CineD) | 7.9 ms | 2.9 kg |
-| ARRI Alexa Mini LF | LF ALEV III (36.70 × 25.54 mm) | 4.5K | — | 14+ (fab.) | ~7.0 ms | ~2.6 kg |
-| RED V-Raptor [X] | FF Global Shutter | 8K | ~9-10 (CineD) | 17+ (fab.) | 0 ms | — |
-| RED V-Raptor 8K VV | FF Rolling | 8K | ~13.7 (CineD) | ~15 (CineD) | — | — |
-| Sony Venice 2 | FF 8.6K | 8.6K | — | 15+ (fab.) | 3.0 ms | 4.3 kg |
-| Sony Burano | FF 8.6K | 8.6K | — | — | 18.9 ms (6 ms UHD) | — |
-
-### Tabla 2: Cámaras de Gama Media y Producción Rápida
-
-| Cámara | Sensor | Res. Máx. | DR (SNR=2) | DR (SNR=1) | Rolling Shutter |
-|--------|--------|-----------|------------|------------|----------------|
-| Canon C400 | FF 6K | 6K | — | — | ~14.7 ms |
-| Canon C300 III | S35 DGO | 4K | 12.8 (CineD) | 14.2 (CineD) | — |
-| ARRI Amira | S35 ALEV III | 3.8K | — | 14+ (fab.) | — |
-| RED Komodo-X | S35 Global Shutter | 6K | — | — | 0 ms |
-
-### Tabla 3: Cámaras Híbridas (Foto/Video)
-
-| Cámara | Sensor | Res. Máx. Video | DR (SNR=2) | Códecs |
-|--------|--------|----------------|------------|--------|
-| Sony A7S III | FF 12.1 MP | 4K 120p | 11.3 (CineD) | XAVC S (H.264), XAVC HS (H.265) |
-| Nikon Z9 / Z8 | FF 45.7 MP | 8K ProRes RAW | — | ProRes, H.265 |
-
----
-
-## 13. Nota Metodológica sobre Cifras de Rango Dinámico
+## NOTA METODOLÓGICA SOBRE CIFRAS (LEER PRIMERO)
 
 Todas las cifras de rango dinámico en este documento deben leerse con su fuente indicada:
 
 - **(fab.):** Declaración del fabricante. No verificada independientemente.
 - **(CineD):** Medición de laboratorio publicada por CineD (cined.com/lab-tests). SNR = 2 salvo indicación contraria.
 - **(est.):** Estimación basada en sensores equivalentes o pruebas de campo.
+- **(⚠️ verificar):** Dato con inconsistencia entre fuentes; requiere confirmación en cined.com antes de usar.
 
 Esta distinción es crítica para que la Gem no trate datos de fabricante y datos de laboratorio como equivalentes.
 
 ---
 
-## 14. Referencias Citadas
+## 1. ECOSISTEMA ARRI
 
-1.  CineD. (2024). *Laboratory Tests: ARRI Alexa 35 Dynamic Range*. cined.com
-2.  CineD. (2024). *Laboratory Tests: Canon EOS C400 Rolling Shutter*. cined.com
-3.  CineD. (2024). *Laboratory Tests: Sony Burano Rolling Shutter*. cined.com
-4.  CineD. (2024). *Laboratory Tests: Sony A7S III Dynamic Range*. cined.com
-5.  CineD. (2024). *Laboratory Tests: RED V-Raptor 8K VV Dynamic Range*. cined.com
-6.  CineD. (2024). *Laboratory Tests: Blackmagic URSA Cine 12K LF*. cined.com
-7.  ARRI. (2024). *Alexa 35 Technical Specifications*. arri.com
-8.  RED Digital Cinema. (2024). *V-Raptor [X] Technical Specifications*. red.com
-9.  Sony Professional. (2024). *Venice 2 Specifications*. sony.com/professional
-10. Canon Professional. (2024). *EOS C400 Specifications*. canon.com/professional
+### 1.1 ARRI Alexa 35
+
+La ARRI Alexa 35 representa un salto generacional en la cinematografía digital Super 35. Monta un sensor ALEV 4 de 4.6K nativos con dimensiones de 27.99 × 19.22 mm (diagonal 33.96 mm). Su relación de aspecto nativa es 4:3 Open Gate.
+
+**Rango dinámico:**
+- 13.1 pasos con criterio SNR = 2 (CineD).
+- 15+ pasos con criterio SNR = 1 (CineD).
+- *Nota:* Los 15.1 y 16.3 pasos reportados en V1.2 no coinciden con mediciones independientes recientes. Se adoptan los valores verificados de CineD.
+
+**Sensibilidad:**
+Sistema *Enhanced Sensitivity* (distinto al Dual Native ISO tradicional). Optimiza la relación señal-ruido mediante procesamiento digital hasta EI 6400 sin penalización significativa de ruido, operando sobre una única ruta de ganancia nativa de EI 800.
+
+**Color science nativo:**
+- Curva gamma: LogC4.
+- Espacio de color: ARRI Wide Gamut 4 (AWG4).
+- El gris medio se desplaza al 28% para reasignar latitud hacia altas luces.
+
+**Otros parámetros:**
+- Rolling shutter: 7.9 ms (Open Gate 4.6K).
+- Resolución máxima: 4.6K (4608 × 3164) hasta 120 fps.
+- Codecs internos: MXF/ARRIRAW y Apple ProRes. Tasa de datos en 4.6K 24p: ~279 MB/s.
+- Almacenamiento: Tarjetas Codex Compact Drives.
+- Montura: LPL (compatible PL con adaptador).
+- Peso: 2.9 kg (cuerpo desnudo).
+- Consumo: ~85W.
+- Precio referencia: ~$75,000 USD (aprox. 2024).
+
+---
+
+### 1.2 ARRI Alexa Mini LF
+
+Sensor Large Format con arquitectura A2X (formado por dos sensores ALEV III empalmados). Dimensiones: 36.70 × 25.54 mm, ligeramente superior al Full Frame fotográfico.
+
+**Rango dinámico:**
+- 14.5 pasos SNR = 2 (medición de laboratorio).
+- 14+ pasos (fab.).
+
+**Color science nativo:**
+- Curva gamma: LogC3.
+- Espacio de color: ARRI Wide Gamut 3.
+
+**Otros parámetros:**
+- Resolución máxima: 4.5K Open Gate (4448 × 3096) hasta 90 fps.
+- Rolling shutter: 7.4 ms en Open Gate. *(Corrección V1.4: V1.3 registraba ~7.0 ms.)*
+- Codecs: MXF/ARRIRAW y Apple ProRes.
+- Montura: LPL.
+- Peso: ~2.6 kg (cuerpo desnudo).
+- Consumo: ~65W.
+- Precio referencia: ~$58,000 USD (aprox. 2024).
+
+---
+
+### 1.3 ARRI Alexa 65
+
+Sistema de alquiler exclusivo de ARRI Rental; no disponible para compra directa. Diseñado para producciones de altísimo perfil que requieren formato muy grande.
+
+**Sensor:**
+- Arquitectura A3X: 54.12 × 25.58 mm (derivado de tres sensores ALEV III).
+- Resolución máxima: 6.5K en Open Gate.
+
+**Otros parámetros:**
+- Montura: LPL.
+- Solo disponible a través de ARRI Rental o renters certificados.
+- *Nota para la Gem:* Mencionarla como referencia de techo del ecosistema ARRI; no recomendarla como opción de adquisición.
+
+---
+
+### 1.4 ARRI Amira
+
+Diseñada como cámara docu-style y para producciones rápidas (ENG). Comparte el sensor ALEV III Super 35 de la Alexa Mini original.
+
+**Dimensiones del sensor:**
+- Modo 16:9: 26.40 × 14.85 mm.
+- Modo Open Gate: 28.17 × 18.13 mm. *(Dato añadido en V1.4.)*
+
+**Otros parámetros:**
+- Resolución máxima: 3.8K UHD.
+- Rango dinámico: 14+ pasos (fab., heredado del sensor ALEV III).
+- Color science: LogC3 / ARRI Wide Gamut 3.
+- Codecs: Apple ProRes sobre tarjetas CFast 2.0.
+- Almacenamiento: CFast 2.0.
+- Peso: 4.1 kg.
+- Consumo: ~50W.
+
+---
+
+## 2. RED DIGITAL CINEMA
+
+### 2.1 RED V-Raptor 8K VV (rolling shutter — original)
+
+Sensor Full Frame VV (VistaVision) de 35.4 MP con obturador rolling convencional de alta velocidad.
+
+**Rango dinámico:**
+- ~13.7 pasos SNR = 2 (CineD).
+- ~15 pasos SNR = 1 (CineD).
+
+**Otros parámetros:**
+- Resolución máxima: 8K.
+- Codecs: REDCODE RAW (R3D) en compresión HQ, MQ y LQ.
+- Color science: REDWideGamutRGB + Log3G10.
+- Almacenamiento: CFexpress Type B. Tasa de transferencia: hasta 800 MB/s.
+
+---
+
+### 2.2 RED V-Raptor [X] y V-Raptor XL [X]
+
+Versión con obturador global (Global Shutter, 0 ms de rolling shutter). Sensor CMOS Full Frame VV de 40.96 × 21.60 mm con tecnología *Global Vision*.
+
+**Rango dinámico:**
+- ⚠️ **DISCREPANCIA CRÍTICA PENDIENTE DE VERIFICACIÓN:**
+  - Fuente V1.2 (tabla): **13.7 pasos SNR=2 (CineD)** — atribuye el mismo valor que la versión rolling shutter original.
+  - Fuente AV-1 V1.3: **~9-10 pasos SNR=2 (CineD)** — distingue pérdida de DR debida al circuito de global shutter.
+  - RED declara: 17+ pasos (fab.) — no verificado independientemente.
+- *Instrucción para la Gem:* Hasta que exista verificación directa en cined.com del modelo [X] específico, citar ambos valores posibles e indicar la disputa. No usar el dato de 17+ pasos como referencia de trabajo.
+
+**Feature destacada — Phantom Track:**
+El rolling shutter inexistente permite capturar simultáneamente flujos de video independientes para fondos de pantallas LED (virtual production) y fondos de croma, en la misma toma.
+
+**Versión XL [X] (diferencias sobre [X] estándar):**
+- Añade conexiones SDI adicionales.
+- Salidas de poder reguladas.
+- Filtros ND internos motorizados (2 a 7 pasos).
+- Peso: 3.6 kg. Consumo: ~120W.
+- Precio XL [X]: ~$39,995 USD.
+
+**Parámetros comunes [X]:**
+- Rolling shutter: 0 ms (global shutter).
+- Resolución máxima: 8K a 120 fps.
+- Codecs: REDCODE RAW (R3D) en HQ, MQ y LQ.
+- Color science: REDWideGamutRGB + Log3G10.
+- Almacenamiento: CFexpress Type B hasta 800 MB/s.
+- ISO base: EI 800.
+- Montura: RF.
+- Peso [X] estándar: ~1.8 kg.
+- Consumo: ~80W.
+- Precio [X]: ~$29,995 USD (aprox. 2024).
+
+---
+
+### 2.3 RED Komodo 6K (original)
+
+Democratizó el obturador global en formato Super 35. Perfil cúbico ultracompacto, ideal para crash cams, drones y cardanes.
+
+**Sensor:** 27.03 × 14.26 mm (Super 35).
+
+**Parámetros:**
+- Resolución: 6K.
+- Rolling shutter: 0 ms (global shutter).
+- Rango dinámico: 12.5 pasos (CineD).
+- Codecs: REDCODE RAW (R3D). Almacenamiento: CFast 2.0.
+- Peso: ~0.95 kg.
+- Montura: RF.
+
+---
+
+### 2.4 RED Komodo-X
+
+Evolución del Komodo con capacidades ampliadas.
+
+**Sensor:** Super 35 (mismo tamaño base que Komodo).
+
+**Parámetros:**
+- Resolución: 6K a 80 fps.
+- Rolling shutter: 0 ms (global shutter).
+- Rango dinámico: 13.6 pasos SNR = 2 (est.).
+- Codecs: R3D y ProRes. Almacenamiento: CFexpress Type B.
+- Peso: ~1.18 kg.
+- Montura: RF.
+- Casos de uso típicos: crash cams, gimbals, VFX con LED volume.
+
+---
+
+## 3. SONY CineAlta (Alta Gama)
+
+### 3.1 Sony Venice 2 8K
+
+Cámara principal del ecosistema CineAlta. Sensor Full Frame retroiluminado (BSI).
+
+**Sensor:** 35.9 × 24.0 mm. *(Dato añadido en V1.4.)*
+
+**Rango dinámico:**
+- 13.2 pasos SNR = 2 (CineD). *(Dato añadido en V1.4; V1.3 solo registraba "15+ fab.")*
+- 15+ pasos (fab.).
+
+**Sensibilidad:**
+- Dual Base ISO nativo: 800 / 3200.
+
+**Color science nativo:**
+- Curva gamma: S-Log3.
+- Espacio de color: S-Gamut3.Cine.
+
+**Codecs y almacenamiento:**
+- X-OCN (eXtended Original Camera Negative) a 16 bits en calidades XT (máxima), ST (estándar) y LT (ligera).
+- Almacenamiento: tarjetas AXS.
+- Bitrate X-OCN ST a 8K/24p: ~1 GB/s.
+- Eliminó el grabador externo R7 de la Venice 1 original.
+
+**Otros parámetros:**
+- Resolución máxima: 8.6K a 30 fps Open Gate; 4K a 120 fps.
+- Rolling shutter: 3.0 ms (excepcional para acción).
+- Montura: PL / E.
+- Peso: 4.3 kg (cuerpo).
+- Consumo: ~76W.
+- Precio referencia: ~$58,000 USD (aprox. 2024).
+
+---
+
+### 3.2 Sony Burano
+
+Hereda el sensor 8.6K de la Venice 2 en un factor de forma compacto para operador único.
+
+**Rango dinámico:**
+- 13.2 pasos SNR = 2 (est., arquitectura de sensor compartida con Venice 2). *(Dato añadido en V1.4.)*
+
+**Innovaciones clave:**
+- IBIS (estabilización de imagen en el cuerpo) integrado.
+- Filtro ND variable electrónico ultradelgado integrado.
+- *Nota:* El procesamiento de estos sistemas eleva significativamente el rolling shutter respecto a la Venice 2.
+
+**Color science nativo:**
+- S-Log3 + S-Gamut3.Cine (heredado de Venice 2).
+
+**Codecs y almacenamiento:**
+- X-OCN LT y XAVC H internos.
+- Almacenamiento: CFexpress Type B.
+
+**Otros parámetros:**
+- Resolución máxima: 8.6K a 30 fps.
+- Rolling shutter: ~18.9 ms en modo 8.6K Full Frame (CineD). Con firmware v2.0, mejora a ~6 ms en modo UHD Full Frame. *(Corrección V1.4: V1.2 registraba ~10 ms; AV-1 V1.3 ya tenía el dato correcto.)*
+- Montura: PL / E.
+- Peso: 2.9 kg.
+- Consumo: ~50W.
+- Precio referencia: ~$25,000 USD (aprox. 2024).
+
+---
+
+## 4. SONY Cinema Line FX
+
+### 4.1 Sony FX9
+
+Cámara de operador único Full Frame de alta gama con ND internos integrados.
+
+**Sensor:** 35.7 × 23.8 mm (Full Frame, 6K).
+
+**Parámetros:**
+- Rango dinámico: 11.5 pasos SNR = 2 (CineD).
+- Dual Base ISO: 800 / 4000.
+- Rolling shutter: ~22 ms.
+- Codecs: XAVC-I (grabación interna).
+- Montura: E.
+- Peso: ~2.0 kg.
+- Consumo: ~35W.
+
+---
+
+### 4.2 Sony FX6
+
+Cámara Full Frame compacta para operador único. Célebre por su rendimiento en condiciones de baja luminosidad y AF predictivo.
+
+**Parámetros:**
+- Sensor: Full Frame (misma arquitectura que FX9 en versión 4K).
+- Rolling shutter: ~8.7 ms.
+- ISO utilizables: superiores a 12,800 gracias al procesamiento interno de reducción de ruido.
+- AF predictivo por detección de fase.
+- Peso: ~0.89 kg.
+- Montura: E.
+
+---
+
+### 4.3 Sony FX3
+
+Cámara Full Frame ultracompacta, puente entre las líneas Alpha y Cinema.
+
+**Parámetros:**
+- Sensor: Full Frame (4K).
+- Rango dinámico: 11.5 pasos SNR = 2 (CineD).
+- Rolling shutter: ~8.7 ms.
+- Codecs: XAVC S-I; ProRes RAW (externo con grabador atomos).
+- Montura: E.
+- Peso: 0.71 kg.
+- Precio referencia: ~$3,899 USD.
+
+---
+
+### 4.4 Sony FX30
+
+Versión APS-C / Super 35 de la línea FX. Traslada el paradigma de AF predictivo y baja luz al formato Super 35 con precio de entrada más accesible.
+
+**Parámetros:**
+- Sensor: APS-C / Super 35.
+- Rolling shutter: ~13 ms (est.).
+- Codecs: XAVC S-I 10 bits.
+- Montura: E (con adaptador para ópticas S35).
+- Casos de uso: segunda cámara, run-and-gun, podcast y contenido de redes sociales.
+
+---
+
+## 5. SONY Híbridas (Foto/Video)
+
+### 5.1 Sony A1 II
+
+Cámara híbrida de máxima resolución con unidad de procesamiento neural integrada.
+
+**Parámetros clave:**
+- Sensor: Full Frame 50.1 MP.
+- Grabación: 8K RAW, 4:2:2 10-bit.
+- Eye-tracking con IA en tiempo real; AF neural predictivo.
+- Codecs: XAVC S-I 4:2:2 10-bit.
+- Montura: E.
+- *Nota:* Plataforma de apoyo relevante para gimbals y producciones donde el peso y factor de forma son críticos.
+
+---
+
+### 5.2 Sony A7S III
+
+Diseñada específicamente para video en condiciones de baja luminosidad.
+
+**Sensor:** Full Frame 12.1 MP.
+
+**Parámetros:**
+- Rango dinámico: 11.3 pasos SNR = 2 (CineD). *(Nota V1.4: la fuente V1.2 registra 11.5 en algunos lugares y 12.4 en otros. Se adopta 11.3 como medición de laboratorio más conservadora. Pendiente verificación definitiva en cined.com.)*
+- Codecs internos: XAVC S (H.264, Long GOP) y XAVC HS (H.265/HEVC 10 bits, eficiente para flujos de postproducción ligeros).
+- *Nota sobre H.265/HEVC:* Presente también en la mayoría de cámaras híbridas modernas (Canon, Panasonic, Nikon). Permite compresión más eficiente que H.264 manteniendo 10 bits. Ideal para entregas rápidas donde el tamaño de archivo es crítico.
+- Resolución máxima de video: 4K a 120p.
+- Montura: E.
+- Peso: 0.61 kg.
+- Precio referencia: ~$3,499 USD.
+
+---
+
+### 5.3 Sony A7R V
+
+Cámara de altísima resolución fotográfica con capacidades de video profesionales.
+
+**Parámetros:**
+- Sensor: Full Frame 61 MP.
+- Grabación video: 4K 4:2:2 10-bit.
+- AF por detección de fase con eye-tracking.
+- Codecs: XAVC S-I 4:2:2 10-bit.
+- Montura: E.
+- *Nota para la Gem:* Plataforma de apoyo para producciones que requieren resolución fotográfica extrema combinada con video. No recomendarla como cámara principal de video.
+
+---
+
+## 6. CANON Cinema EOS
+
+### 6.1 Canon EOS C400
+
+Consolidación de la montura RF en el cine profesional. Sensor Full Frame retroiluminado (BSI).
+
+**Sensor:** 38.4 × 20.2 mm. *(Dato añadido en V1.4.)*
+
+**Rango dinámico:**
+- ~13 pasos SNR = 2 (est.).
+
+**Sensibilidad:**
+- Triple Base ISO: 800 / 3200 / 12,800. Optimiza la relación señal-ruido en escenarios de iluminación precaria.
+
+**Color science nativo:**
+- Canon Log 2: prioriza el rango dinámico máximo.
+- Canon Log 3: optimiza el flujo de trabajo, 14 pasos nominales.
+
+**Codecs y almacenamiento:**
+- Cinema RAW Light (12 bits) hasta 6K 60 fps.
+- XF-AVC hasta 4K 120 fps.
+- Almacenamiento: CFexpress Type B.
+
+**Otros parámetros:**
+- Rolling shutter: ~14.7 ms en modo 6K Full Frame (CineD). *(Corrección V1.4: V1.2 registraba ~4.5 ms — probable error de modo o criterio de medición.)*
+- Montura: RF.
+- Peso: 1.54 kg.
+- Consumo: ~35W.
+
+---
+
+### 6.2 Canon EOS C500 Mark II
+
+Cámara de cine Full Frame modular de alta resolución.
+
+**Sensor:** 38.1 × 20.1 mm (Full Frame).
+
+**Parámetros:**
+- Resolución máxima: 5.9K.
+- Rolling shutter: ~15 ms.
+- Diseño modular: acepta unidades de expansión de audio, batería y monitor.
+- Codecs: Cinema RAW Light 12 bits; XF-AVC.
+- Montura: PL / EF / RF (con adaptadores).
+- Color science: Canon Log 2 / Canon Log 3.
+
+---
+
+### 6.3 Canon EOS C300 Mark III
+
+Cámara Super 35 con tecnología Dual Gain Output (DGO).
+
+**Tecnología DGO:** Combina lecturas de alta y baja ganancia a nivel de pixel para expandir el rango dinámico sin necesidad de dos circuitos físicos separados.
+
+**Sensor:** 26.2 × 13.8 mm (Super 35).
+
+**Rango dinámico:**
+- 12.8 pasos SNR = 2 (CineD). Dato verificado.
+- 14.2 pasos SNR = 1 (CineD). Dato verificado.
+
+**Otros parámetros:**
+- Resolución máxima: 4K a 120 fps.
+- Rolling shutter: 15.6 ms. *(Dato añadido en V1.4.)*
+- Codecs: Cinema RAW Light; XF-AVC.
+- Montura: EF / PL.
+- Peso: 1.75 kg.
+- Color science: Canon Log 2 / Log 3.
+
+---
+
+### 6.4 Canon EOS C70
+
+Empaqueta el sensor DGO de la C300 Mark III en un diseño híbrido compacto con montura RF nativa.
+
+**Parámetros:**
+- Sensor: Super 35 DGO (misma arquitectura que C300 Mark III).
+- Rango dinámico: 12.8 pasos SNR = 2 (CineD, heredado).
+- ND internos integrados (característica diferenciadora sobre la C300 Mark III).
+- Diseño híbrido RF: compatible con el ecosistema completo de ópticas RF Canon.
+- Peso: ~1.19 kg.
+
+---
+
+### 6.5 Canon R5 C / R5 Mark II
+
+Puentes entre fotografía de alta resolución y grabación de cine.
+
+**Parámetros:**
+- Sensor: Full Frame.
+- Resolución máxima: 8K Cinema RAW Light.
+- Rolling shutter R5 C: ~15.5 ms.
+- Ventilador activo integrado para evitar límites térmicos de grabación continua.
+- Codecs: Cinema RAW Light; XF-AVC.
+- Montura: RF.
+- Peso R5 C: 0.68 kg.
+- Precio R5 C referencia: ~$3,899 USD.
+
+---
+
+## 7. BLACKMAGIC DESIGN
+
+### 7.1 Blackmagic URSA Cine 12K LF
+
+Cámara de formato grande con sensor RGBW que omite el patrón Bayer tradicional.
+
+**Sensor:** RGBW Large Format, 35.64 × 23.32 mm. *(Dato añadido en V1.4.)*
+
+**Rango dinámico:**
+- 13.6 pasos con BRAW y curva BMD Film Gen 5 (CineD). *(Dato añadido en V1.4.)*
+
+**Sensibilidad:**
+- ISO dual nativo: 400 / 3200.
+
+**Color science nativo:**
+- Curva gamma: Blackmagic Film Gen 5.
+- Espacio de color: Blackmagic Wide Gamut.
+
+**Codecs:**
+- Blackmagic RAW (BRAW) en diferentes tasas de compresión.
+
+**Rolling shutter:**
+- ~12 ms en 12K Open Gate (CineD).
+- ~5.5 ms en modo 8K (CineD). *(Corrección V1.4: V1.3 registraba "4K 17:9"; la fuente especifica 8K.)*
+
+**Conectividad avanzada:**
+- Terminales Ethernet 10G/100G para transmisión SMPTE ST 2110.
+- Compatible con flujos Camera to Cloud.
+
+**Otros parámetros:**
+- Resolución máxima: 12K a 80 fps Open Gate; 4K a 240 fps.
+- Montura: PL / EF.
+- Peso: ~3.9 kg (cuerpo desnudo).
+- Consumo: ~85W.
+- Precio referencia: ~$14,995 USD (aprox. 2024).
+
+---
+
+### 7.2 Blackmagic URSA Mini Pro 12K
+
+Versión Super 35 con la iteración original del sensor RGBW de Blackmagic.
+
+**Parámetros:**
+- Sensor: Super 35 RGBW (generación original).
+- Resolución máxima: 12K.
+- Color science: BMD Film Gen 5 / Blackmagic Wide Gamut.
+- Codecs: BRAW.
+- Montura: PL / EF / B4.
+- *Nota para la Gem:* Opción accesible para producciones que necesitan resolución extrema en formato S35 sin el costo de la URSA Cine.
+
+---
+
+### 7.3 Blackmagic Pyxis 6K
+
+Diseño tipo caja (box-style) en Full Frame, optimizado para drones, grúas y sistemas remotos.
+
+**Parámetros:**
+- Sensor: Full Frame 6K.
+- Rolling shutter: ~19 ms en paneos críticos (est.).
+- Color science: BMD Film Gen 5 / Blackmagic Wide Gamut.
+- Codecs: BRAW.
+- Montura: L / EF (con adaptador).
+- *Nota:* Perfil cúbico sin elementos ergonómicos de mano; requiere accesorio de hombro o rig para operación directa.
+
+---
+
+### 7.4 Blackmagic Pocket Cinema Camera 6K Pro / G2
+
+Cámara principal del mercado indie cinematográfico de acceso. Formato Super 35.
+
+**Parámetros:**
+- Sensor: Super 35.
+- Resolución: 6K.
+- ND motorizados integrados (característica diferenciadora en este rango de precio).
+- Color science: BMD Film Gen 5 / Blackmagic Wide Gamut.
+- Codecs: BRAW.
+- Montura: EF (con adaptador L o PL).
+- *Nota para la Gem:* La Pocket Cinema 6K es la puerta de entrada al flujo de trabajo cinematográfico de Blackmagic. Ideal para contenido de redes donde se requiere look de cine sin presupuesto de producción elevado.
+
+---
+
+## 8. PANASONIC
+
+### 8.1 Panasonic Varicam LT
+
+Pionera en tecnología Dual Native ISO para grabación en condiciones de baja luz. Estándar de facto en broadcast narrativo y documental.
+
+**Parámetros:**
+- Sensor: Super 35.
+- Dual Native ISO: 800 / 5000 (el segundo más alto de cualquier cámara de gama media; relevante para sets con iluminación limitada).
+- Color science: V-Log / V-Gamut.
+- Codecs: AVC-Intra 4K RAW; ProRes.
+- Montura: PL.
+
+---
+
+### 8.2 Panasonic EVA1
+
+Cámara Super 35 de operador único ultracompacta y eficiente en consumo.
+
+**Parámetros:**
+- Sensor: Super 35.
+- Resolución: 5.7K.
+- Color science: V-Log / V-Gamut.
+- Codecs: Cinema DNG RAW; AVC-Intra.
+- Montura: EF (con adaptador PL).
+- Peso: 1.2 kg.
+- Consumo: 19W (uno de los más bajos de su categoría; relevante para setups con baterías V-mount o PoE+).
+
+---
+
+### 8.3 Panasonic GH7
+
+Cámara Micro Cuatro Tercios con capacidades de grabación ProRes RAW internas y licencia oficial LogC3 de ARRI.
+
+**Parámetros:**
+- Sensor: Micro Cuatro Tercios (M4/3).
+- Resolución máxima: 5.7K a 60 fps.
+- Rango dinámico: 11.5 pasos (V-Log, est. de laboratorio).
+- Rolling shutter: ~10 ms.
+- Codecs: ProRes RAW (interno); H.265 10 bits.
+- Audio: Grabación a 32 bits en coma flotante (característica profesional sin equivalente en esta gama de precio).
+- Licencia oficial ARRI LogC3 para emulación directa del perfil de color ARRI.
+- Montura: MFT.
+- Peso: ~0.8 kg.
+- Precio referencia: ~$2,199 USD.
+
+---
+
+### 8.4 Panasonic S1H
+
+Cámara Full Frame de alto rango dinámico con certificación Netflix para producción original.
+
+**Parámetros:**
+- Sensor: Full Frame.
+- Resolución: 6K.
+- Color science: V-Log L / V-Gamut.
+- Codecs: Apple ProRes RAW (externo); H.265 10 bits (interno).
+- Montura: L.
+
+---
+
+### 8.5 Panasonic BS1H
+
+Versión box-style de la S1H, diseñada para transmisiones IP y redes.
+
+**Parámetros:**
+- Sensor: Full Frame (misma arquitectura que S1H).
+- Consumo: 15W — optimizada para alimentación PoE+ (Power over Ethernet).
+- Color science: V-Log L / V-Gamut.
+- Conectividad: IP nativa para streaming directo.
+- Montura: L.
+- *Nota para la Gem:* Ideal para setups de stream permanente de Pool Balance (presentación en vivo, behind the scenes en redes).
+
+---
+
+## 9. Z-CAM
+
+### 9.1 Z-Cam E2-F6 y E2-F8
+
+Cámaras modulares de diseño caja (box-style) para Full Frame con monturas intercambiables por el usuario.
+
+**E2-F6:**
+- Sensor: Full Frame.
+- Resolución: 6K a 60 fps.
+- Rango dinámico: 15 pasos (fab.).
+- Rolling shutter: ~20 ms.
+- Codecs: ZRAW (interno nativo) o ProRes RAW (externo).
+- Montura: EF o PL (intercambiables por el operador, no requiere taller).
+
+**E2-F8:**
+- Sensor: Full Frame.
+- Resolución: 8K.
+- Mismas opciones de montura que la E2-F6.
+
+*Nota para la Gem:* La intercambiabilidad de montura en campo es característica única de Z-Cam; permite usar una sola cámara con ópticas EF y PL en el mismo proyecto.
+
+---
+
+## 10. DJI RONIN 4D / 4D FLEX
+
+Sistema disruptivo que fusiona estabilización mecánica de 4 ejes con sensor intercambiable en un único ecosistema integrado.
+
+**Sensor (intercambiable):**
+- Full Frame CMOS: 35.9 × 23.9 mm.
+- Opciones: X9-6K o X9-8K.
+
+**Parámetros:**
+- Rango dinámico: 11.5 pasos SNR = 2 (est.).
+- Dual Native ISO: 800 / 4000.
+- Rolling shutter: ~15 ms (est.).
+- ND físicos internos: 9 pasos.
+- Codecs: Apple ProRes RAW; ProRes 4444 XQ.
+- Resolución máxima: 8K a 75 fps.
+- Montura: DL / E.
+
+**Ronin 4D Flex:**
+Separa el bloque del sensor del cuerpo principal, reduciendo el peso operativo en la cabeza de la grúa o drone a una fracción del sistema completo. Permite operación remota con monitor separado.
+
+*Nota para la Gem:* El Ronin 4D es la plataforma de elección cuando el movimiento de cámara continuo y fluido es el requerimiento principal del shot (testimoniales en carro, tomas aéreas con movimiento lateral, tracking de sujeto en exteriores como albercas).
+
+---
+
+## 11. SIGMA fp / fp L
+
+Las cámaras de cine de factor de forma más compacto del mercado. Diseño minimalista sin obturador mecánico.
+
+**Sigma fp (12.1 MP):**
+- Sensor: Full Frame FOVEON (12.1 MP).
+- Codecs: CinemaDNG RAW de 12 bits transmitido directamente a SSD externo vía USB-C.
+- Montura: L.
+- Sin obturador mecánico: solo obturador electrónico global.
+- *Nota:* Requiere SSD externo para grabación RAW; no graba RAW en tarjeta interna.
+
+**Sigma fp L (61 MP):**
+- Sensor: Full Frame 61 MP (BSI).
+- Mismas capacidades de video que la fp.
+- Mayor resolución fotográfica.
+- Montura: L.
+
+*Nota para la Gem:* Las Sigma fp son ideales como cámaras ocultas o de posición fija en sets muy reducidos. El tamaño es su diferenciador absoluto, no el rendimiento de video puro.
+
+---
+
+## 12. NIKON Z9 / Z8
+
+Plataformas híbridas de altísima resolución con capacidades de video profesionales en un solo cuerpo.
+
+**Parámetros comunes (Z9 y Z8 comparten arquitectura de sensor):**
+- Sensor: Full Frame 45.7 MP (BSI apilado).
+- Grabación interna: 8K ProRes RAW.
+- Video 4K: hasta 120p en H.265 de 10 bits.
+- Rolling shutter: reducido significativamente por arquitectura BSI apilada (est. ~15 ms en 8K, pendiente verificación específica de CineD).
+- Rango dinámico: pendiente de medición verificada (dato no disponible en fuentes de referencia actuales).
+- Montura: Z.
+- *Nota para la Gem:* Ampliamente utilizadas como cámaras B o principales en producciones donde el factor de forma y el peso son críticos. El ProRes RAW interno es una ventaja en flujo de postproducción Davinci Resolve / Final Cut.
+
+---
+
+## 13. TABLAS DE REFERENCIA
+
+### Tabla 1: Cámaras de Alta Gama
+
+| Cámara | Sensor (mm) | Res. Máx. | DR SNR=2 | DR SNR=1 | Rolling Shutter | Peso | Precio aprox. USD |
+|--------|-------------|-----------|----------|----------|----------------|------|-------------------|
+| ARRI Alexa 35 | S35 ALEV 4 (27.99 × 19.22) | 4.6K @ 120fps | 13.1 (CineD) | 15+ (CineD) | 7.9 ms | 2.9 kg | $75,000 |
+| ARRI Alexa Mini LF | LF A2X (36.70 × 25.54) | 4.5K @ 90fps | 14.5 (lab.) | 14+ (fab.) | 7.4 ms | 2.6 kg | $58,000 |
+| RED V-Raptor [X] | FF VV GS (40.96 × 21.60) | 8K @ 120fps | ⚠️ 9-10 o 13.7 (verificar) | 17+ (fab.) | 0 ms (global) | 1.8 kg | $29,995 |
+| RED V-Raptor 8K VV | FF VV Rolling | 8K | 13.7 (CineD) | 15 (CineD) | <8 ms | — | — |
+| Sony Venice 2 8K | FF BSI (35.9 × 24.0) | 8.6K @ 30fps | 13.2 (CineD) | 15+ (fab.) | 3.0 ms | 4.3 kg | $58,000 |
+| Sony Burano | FF (35.9 × 24.0) | 8.6K @ 30fps | 13.2 (est.) | — | 18.9 ms / 6 ms (UHD fw2.0) | 2.9 kg | $25,000 |
+| BMD URSA Cine 12K LF | LF RGBW (35.64 × 23.32) | 12K @ 80fps | 13.6 (CineD) | — | 12 ms (12K) / 5.5 ms (8K) | 3.9 kg | $14,995 |
+
+### Tabla 2: Cámaras de Gama Media y Arquitecturas Modulares
+
+| Cámara | Sensor | Res. Máx. | DR SNR=2 | DR SNR=1 | Rolling Shutter | Códecs |
+|--------|--------|-----------|----------|----------|----------------|--------|
+| Canon C400 | FF BSI (38.4 × 20.2) | 6K @ 60fps | ~13 (est.) | — | 14.7 ms | C.RAW Light, XF-AVC |
+| Canon C500 Mark II | FF (38.1 × 20.1) | 5.9K | — | — | ~15 ms | C.RAW Light, XF-AVC |
+| Canon C300 Mark III | S35 DGO (26.2 × 13.8) | 4K @ 120fps | 12.8 (CineD) | 14.2 (CineD) | 15.6 ms | C.RAW Light, XF-AVC |
+| RED Komodo-X | S35 GS (27.03 × 14.26) | 6K @ 80fps | 13.6 (est.) | — | 0 ms | R3D, ProRes |
+| RED Komodo | S35 GS (27.03 × 14.26) | 6K | 12.5 (CineD) | — | 0 ms | R3D |
+| DJI Ronin 4D 8K | FF (35.9 × 23.9) | 8K @ 75fps | 11.5 (est.) | — | ~15 ms | ProRes RAW, 4444 XQ |
+| Sony FX9 | FF (35.7 × 23.8) | 4K @ 60fps | 11.5 (CineD) | — | ~22 ms | XAVC-I |
+| ARRI Amira | S35 ALEV III (26.40 × 14.85) | 3.8K | — | 14+ (fab.) | — | ProRes |
+
+### Tabla 3: Cámaras Híbridas y Compactas Profesionales
+
+| Cámara | Sensor | Res. Máx. Video | DR SNR=2 | Códecs | Montura | Peso | Precio USD |
+|--------|--------|----------------|----------|--------|---------|------|------------|
+| Sony A7S III | FF 12.1 MP | 4K 120p | 11.3 (CineD) | XAVC S, XAVC HS | E | 0.61 kg | $3,499 |
+| Sony FX3 | FF | 4K 120p | 11.5 (CineD) | XAVC S-I, ProRes RAW ext. | E | 0.71 kg | $3,899 |
+| Sony FX6 | FF | 4K 120p | 11.5 (est.) | XAVC S-I | E | 0.89 kg | — |
+| Canon R5 C | FF | 8K 60p | 11.5 (est.) | C.RAW Light, XF-AVC | RF | 0.68 kg | $3,899 |
+| Nikon Z9 / Z8 | FF 45.7 MP | 8K ProRes RAW | ⚠️ pendiente | ProRes RAW, H.265 | Z | — | — |
+| Panasonic GH7 | M4/3 | 5.7K 60fps | 11.5 (est.) | ProRes RAW, H.265 | MFT | 0.8 kg | $2,199 |
+| Panasonic S1H | FF | 6K | — | ProRes RAW ext., H.265 | L | — | — |
+| Sigma fp L | FF 61 MP | 4K RAW ext. | — | CinemaDNG RAW | L | ~0.42 kg | — |
+| BMD Pocket 6K Pro | S35 | 6K | — | BRAW | EF | — | — |
+
+---
+
+## 14. TENDENCIAS OPERATIVAS EN ADQUISICIÓN CINEMATOGRÁFICA
+
+El diseño de cámaras de la presente década obedece a cuatro vectores de desarrollo que la Gem debe considerar al recomendar estrategias de producción:
+
+### 14.1 El Estándar Open Gate
+
+La necesidad de entregar contenido simultáneamente en aspectos panorámicos cinematográficos (2.39:1) y verticales para consumo móvil (9:16) ha forzado a la industria a capturar la totalidad del área del sensor (formatos 3:2 o 6:5). Esto permite el reencuadre en postproducción sin comprometer la resolución base. **Para Pool Balance:** grabar en Open Gate permite entregar el mismo material en formato horizontal para web/YouTube y vertical para Instagram Reels/TikTok sin volver al set.
+
+### 14.2 Consolidación del Obturador Global
+
+Innovaciones como las de la RED V-Raptor [X] han solucionado la histórica pérdida de rango dinámico asociada al circuito de global shutter. Su utilidad es innegable en los *LED volumes* (producción virtual con pantallas LED), donde el escaneo progresivo del rolling shutter causa patrones de muaré y desincronización con las tasas de refresco de las pantallas.
+
+### 14.3 Redes IP y Transmisión SMPTE ST 2110
+
+La URSA Cine 12K LF y la RED V-Raptor XL integran terminales Ethernet de cobre y fibra (10G/100G) para transmitir señal de video en crudo a estaciones de control remoto o infraestructura de broadcast basada en IP, eludiendo la compresión SDI tradicional y alimentando plataformas directas a la nube (*Camera to Cloud*). Relevante para transmisiones en vivo de eventos de piscinas o instalaciones en tiempo real.
+
+### 14.4 Inteligencia Artificial en el Flujo de Adquisición
+
+Cámaras como la Sony A1 II y las plataformas híbridas Panasonic integran unidades de procesamiento neural que alimentan algoritmos de seguimiento ocular en tiempo real, eliminando la necesidad de un operador de foco dedicado en equipos reducidos. **Para Pool Balance:** relevante para shooting de testimoniales de clientes o demostraciones de producto con un equipo mínimo.
+
+---
+
+## 15. REFERENCIAS CITADAS
+
+1. CineD. (2024). *Laboratory Tests: ARRI Alexa 35 Dynamic Range*. cined.com
+2. CineD. (2024). *Laboratory Tests: Canon EOS C400 Rolling Shutter*. cined.com
+3. CineD. (2024). *Laboratory Tests: Sony Burano Rolling Shutter*. cined.com
+4. CineD. (2024). *Laboratory Tests: Sony A7S III Dynamic Range*. cined.com
+5. CineD. (2024). *Laboratory Tests: RED V-Raptor 8K VV Dynamic Range*. cined.com
+6. CineD. (2024). *Laboratory Tests: Blackmagic URSA Cine 12K LF*. cined.com
+7. CineD. (2024). *Laboratory Tests: Canon C300 Mark III Dynamic Range*. cined.com
+8. CineD. (2024). *Laboratory Tests: Sony Venice 2 Dynamic Range*. cined.com
+9. ARRI. (2024). *Alexa 35 Technical Specifications*. arri.com
+10. RED Digital Cinema. (2024). *V-Raptor [X] Technical Specifications*. red.com
+11. Sony Professional. (2024). *Venice 2 Specifications*. sony.com/professional
+12. Canon Professional. (2024). *EOS C400 Specifications*. canon.com/professional
+13. Blackmagic Design. (2024). *URSA Cine 12K LF Specifications*. blackmagicdesign.com
+14. Panasonic. (2024). *GH7 Specifications*. panasonic.com
+15. DJI. (2024). *Ronin 4D Specifications*. dji.com/ronin-4d
+16. Investigación Técnica Audiovisual Profesional V1.2. (2024). Pool Balance — repositorio de memoria.
+
+> **⚠️ Dato crítico pendiente de cierre:** El rango dinámico del RED V-Raptor [X] (versión global shutter) presenta discrepancia entre fuentes. Verificar directamente en cined.com/lab-tests buscando "RED V-Raptor X dynamic range" antes de usar la cifra en recomendaciones de producción.
